@@ -1,0 +1,66 @@
+:root {
+  --black: rgb(0, 0, 0);
+  --blackTwo: #0b0b0b;
+  --blackFive: #141414;
+  --blackThree: #1f1f1f;
+  --blackSeven: #292929;
+  --blackSix: #3c333b;
+  --blackFour: #404040;
+  --hr: #f1f1f3;
+
+  --mainRed: #ce0033;
+  --redTwo: #cc0028;
+  --redThree: #c00332;
+  --redFour: #cb0233;
+  --redFive: #cc002b;
+ 
+  --whiteOne: rgb(253, 253, 253);
+  --softWhite: #f2f2f2;
+  --softWiteTwo: #e5e5e5;
+
+  --mainGray: #f6f6fa;
+  --focusGray: #e8e8e8;
+  --grayOne: #747474;
+  --fontGray: rgb(248, 248, 248);
+  --placeholderGray: #b1b1b2;
+  --softGray: #c6c6c6;
+  --grayTwo: #c9c9c9; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.recruInfos {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--black); 
+  padding: 0.5rem 4rem;
+}
+
+.recruInfos span {
+  color: white;
+  font-size: 0.85rem;
+}
+
+.recruInfos > span {
+  font-style: italic;
+}
+
+.recruInfos > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+}
+.recruInfos > div img {
+  width: 1.5rem;
+}
