@@ -1,30 +1,15 @@
 :root {
   --black: rgb(0, 0, 0);
-  --blackTwo: #0b0b0b;
-  --blackFive: #141414;
+  --softblack: rgba(0, 0, 0, 0.7);
+  --blackTwo: #272727;
   --blackThree: #1f1f1f;
-  --blackSeven: #292929;
-  --blackSix: #3c333b;
-  --blackFour: #404040;
-  --hr: #f1f1f3;
-
+  --blackFour: #141414;
   --mainRed: #ce0033;
-  --redTwo: #cc0028;
-  --redThree: #c00332;
-  --redFour: #cb0233;
-  --redFive: #cc002b;
- 
-  --whiteOne: rgb(253, 253, 253);
-  --softWhite: #f2f2f2;
-  --softWiteTwo: #e5e5e5;
-
+  --placeholderGray: #9D9D9C;
   --mainGray: #f6f6fa;
-  --focusGray: #e8e8e8;
-  --grayOne: #747474;
-  --fontGray: rgb(248, 248, 248);
-  --placeholderGray: #b1b1b2;
-  --softGray: #c6c6c6;
-  --grayTwo: #c9c9c9; 
+  --fontGray: #F2F2F2;
+  --focusGray: #E8E8E8; 
+  --softGray: #F5F5F5;
 }
 
 * {
@@ -33,34 +18,975 @@
   box-sizing: border-box;
   font-family: "Nunito Sans", sans-serif;
 }
-
+#main {
+  position: relative;
+  width: 100%;
+}
 ul {
   list-style-type: none;
 }
-
+a {
+  text-decoration: none;
+}
+header {
+  width: 100%;
+}
 .recruInfos {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: var(--black); 
-  padding: 0.5rem 4rem;
+  padding: 0.5rem 6%;
+  font-size: 0.7rem;
 }
-
 .recruInfos span {
   color: white;
-  font-size: 0.85rem;
 }
-
 .recruInfos > span {
   font-style: italic;
+  letter-spacing: 2px;
+  font-weight: 500;
 }
-
 .recruInfos > div {
   display: flex;
   justify-content: space-between;
   align-items: center;  
 }
+.recruInfos > div span {
+  margin-right: 0.6rem;
+}
 .recruInfos > div img {
+  width: 1.3rem;
+}
+nav {
+  width: calc(100% - 12%);
+  padding: 1.5rem 0;
+  margin: 0 auto;
+  border-bottom: 2px solid var(--hr);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav > div {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav img {
+  width: 115px;
+}
+nav > div > ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav > div > ul a {
+  color: var(--black);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-left: 1rem;
+}
+nav > div  > ul a:not(:last-child):hover {
+  color: var(--mainRed);
+  font-weight: 800;
+}
+nav > div  > ul a.active {
+  color: var(--mainRed);
+}
+.btn {
+  background: var(--mainRed);
+  padding: 0.5rem 1.3rem;
+  color: white;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  border: none;
+  cursor: pointer;
+}
+#indexSection {
+  width: 100%;
+  padding: 0 6%;
+}
+#searchTalent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.3rem 0 4rem;
+}
+#searchTalent h1 {
+  text-align: center;
+  color: var(--black);
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+p {
+  font-size: 1rem;
+  font-weight: 600;
+}
+#searchTalent p {
+  text-align: center;
+  color: var(--black);
+  width: 50%;
+  margin-bottom: 0.9rem;
+}
+#searchTalent form {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+form input {
+  font-size: 0.85rem;
+  background: var(--mainGray);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  color: var(--blackTwo);
+  font-weight: 700;
+}
+form input:focus {
+  background: var(--focusGray);
+}
+#searchTalent form input {
+  width: 100%;
+}
+input::placeholder {
+  font-size: 0.85rem;
+  color: var(--placeholderGray);
+}
+input::-moz-placeholder {
+  font-size: 0.85rem;
+  color: var(--placeholderGray);
+}
+input::-webkit-input-placeholder {
+  font-size: 0.85rem;
+  color: var(--placeholderGray);
+}
+#homeDesc {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+#homeDesc article, #homeDesc aside {
+  width: max(50%, 275px);
+  display: flex;
+}
+#homeDesc article {
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 2rem;
+}
+#homeDesc h2 {
+  color: var(--black);
+  font-size: 2.5rem;
+  line-height: 2.7rem;
+  font-weight: 900;
+  width: 80%;
+}
+#homeDesc p {
+  color: var(--blackFive);
+}
+#homeDesc p strong {
+  font-weight: 800;
+}
+#homeDesc article p {
+  margin: 1rem 0;
+}
+#homeDesc article img {
   width: 1.5rem;
+}
+#homeDesc article .btn {
+  margin-top: 2rem;
+  padding: 0.5rem 2rem;
+}
+#homeDesc aside {
+  gap: 20px;
+}
+aside > div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+aside > div:last-child {
+  margin-top: 2rem;
+}
+aside .card {
+  width: max(100%, 270px);
+  padding: 1rem;
+  border-radius: 10px;
+  padding-bottom: 2rem;
+}
+aside > div:first-child .card:first-child, 
+aside > div:last-child .card:last-child {
+  background: var(--mainGray);
+}
+aside > div:first-child .card:last-child, 
+aside > div:last-child .card:first-child {
+  background: var(--blackThree);
+  color: var(--fontGray);
+}
+#homeDesc aside > div:first-child .card:last-child p, 
+#homeDesc aside > div:last-child .card:first-child p {
+  color: var(--fontGray);
+}
+aside .card h3 {
+  font-weight: 900;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+}
+aside .card p {
+  font-weight: 400;
+}
+#talentSection {
+  width: 100%;
+}
+#talentHome {
+  width: 100%;
+  padding: 0 6%;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+#talentList {
+  display: flex;
+  row-gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 70%;
+}
+#metier {
+  width: 30%;
+}
+.talent {
+  border-radius: 0.8rem;
+  width: max(32%, 250px);
+  background: var(--blackTwo);
+  cursor: pointer;
+}
+.talentPic, .talentInfos {
+  width: 100%;
+}
+.talentPic {
+  border-radius: 0.8rem;
+  overflow: hidden;
+  height: 240px;
+}
+.talent:hover .talentPic {
+  background-size: 125%;
+}
+.talent:hover h3, .talent:hover h4 {
+  text-decoration: underline;
+}
+.anoky {
+  background: url("image/image4.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.arnold {
+  background: url("image/image1.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.yvonne {
+  background: url("image/image2.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.christ {
+  background: url("image/christ.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.snooky {
+  background: url("image/image3.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.john {
+  background: url("image/image4smile.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.rick {
+  background: url("image/image4dreads.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.ada {
+  background: url("image/image4hat.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.koffi {
+  background: url("image/image4blue.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.talentPic img {
+  width: 100%;
+  border-radius: 0.8rem;
+}
+.talentPic:hover img {
+  width: 110%;
+}
+.talentInfos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+}
+.talentInfos h3 {
+  color: var(--fontGray);
+  font-size: 1rem;
+}
+.talentInfos h4 {
+  color: var(--mainRed);
+  font-size: 0.85rem;
+  margin-bottom: 0.6rem;
+}
+.talentInfos .bailleur {
+  color: white;
+  font-size: 0.8rem;
+}
+.talentInfos .talentForm {
+  color: white;
+  font-size: 0.8rem;
+  font-style: italic;
+  margin-bottom: 0.3rem;
+}
+#metier {
+  border-radius: 0.7rem;
+  background: var(--mainGray);
+  padding: 2rem 1rem;
+}
+#metier h2 {
+  color: var(--black);
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+#metier > div {
+  margin-bottom: 1.5rem;
+}
+#metier > div h3 {
+  color: var(--mainRed);
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+#metier > div:first-of-type ul li:first-child {
+  font-weight: 700;
+}
+#metier li {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: var(--black);
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+.mcircle {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 2px solid var(--mainRed);
+  border-radius: 50%;
+  position: relative;
+}
+#metier li .mcircle {
+  margin-right: 6px;
+}
+.mcheck {
+  width: 5px;
+  height: 9px;
+  background: transparent;
+  border-width: 0 2px 2px 0;
+  border-color: var(--mainRed);
+  border-style: solid;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -3px;
+  margin-top: -5px;
+  transform: rotate(45deg);
+}
+#talentSection > ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 3rem 0;
+  padding: 0 6%;
+}
+#talentSection > ul li {
+  font-size: 1rem;
+  font-weight: 800;
+  margin-right: 0.4rem;
+  border-radius: 1.7rem;
+  cursor: pointer;
+}
+#talentSection > ul li:first-child {
+  color: var(--fontGray);
+  background: var(--mainRed);
+  padding: 0.5rem 0.9rem;
+}
+#talentSection > ul li:not(:first-child) {
+  background: var(--mainGray);
+  color: var(--black);
+  border: 1px solid var(--black);
+  padding: 0.4rem 0.8rem;
+}
+#talentprofile {
+  width: 100%;
+}
+#banniere {
+  width: 100%;
+  padding: 1.5rem 6%;
+  background: var(--mainGray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#banniere .pp {
+  width: 200px;
+  height: 200px;
+  border: 4px solid var(--mainRed);
+  margin-right: 1.5rem;
+}
+.pp {
+  border-radius: 50%;
+}
+.pp img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+#banniere h1 {
+  color: var(--black);
+  font-weight: 900;
+  font-size: 2.4rem;
+}
+#banniere h2 {
+  color: var(--mainRed);
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+#banniere .groupe8 {
+  width: 1.5em;
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+}
+.modif {
+  width: 1.7em;
+  height: 1.7em;
+  border: 2px solid var(--black);
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  cursor: pointer;
+}
+.modif img {
+  width: 1em;
+}
+#banniere .modif {
+  position: absolute;
+  right: 6%;
+  top: 1rem;
+}
+#profilebio {
+  width: 100%;
+  padding: 1em 6%;
+}
+#bio {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+#profilebio h3 {
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+#bio h3 {
+  margin-right: 1em;
+}
+#bio p {
+  width: 100%;
+}
+#cv {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  column-gap: 1em;
+  margin: 2em 0 3em;
+}
+#cv > div {
+  width: 49%;
+}
+#cv > div > div {
+  border-radius: 0.7em;
+  padding: 1.5em;
+  background: var(--mainGray);
+  margin-bottom: 1em;
+}
+#cvComp > div:first-child,
+#cvForm > div:first-child, 
+#certif > div:first-child, 
+#cvExp > div:first-child {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#cvComp > div:first-child > div {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+#compList {
+  margin-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 0.5em;
+}
+.compBtn {
+  color: var(--fontGray);
+  background: var(--mainRed);
+  border-radius: 2em;
+  font-size: 0.9rem;
+  padding: 0.5em 1.2em;
+  margin-right: 0.3em;
+}
+#cvExp .modif, #cvForm .modif, #certif .modif {
+  font-weight: 900;
+}
+.expItem, .formItem, .certifItem {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 1em;
+  margin: 1em 0;
+  border-bottom: 1px solid var(--fontGray);
+}
+.expItem > span, 
+.formItem > span, 
+.certifItem > span {
+  font-size: 1em;
+  border-radius: 2em;
+  padding: 0.4em 0.8em;
+  margin-right: 0.5em;
+  color: white;
+}
+.expItem > span, 
+.formItem > span {
+  background: var(--mainRed);
+}
+.certifItem > span {
+  background: var(--black);
+}
+.expItem > div, 
+.formItem > div, 
+.certifItem > div  {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.expItem > div > div:last-child,
+.formItem > div > div:last-child,
+.certifItem > div > div:last-child {
+  display: flex;
+  align-items: center;
+  column-gap: 0.3em;
+}
+.expItem h4, 
+.formItem h4, 
+.certifItem h4 {
+  font-weight: 800;
+}
+.expItem p, 
+.formItem p, 
+.certifItem p {
+  font-weight: 600;
+}
+.expItem p:first-of-type span {
+  font-style: italic;
+  font-weight: 700;
+}
+.expItem p:nth-of-type(2) span {
+  font-weight: 900;
+}
+#autretalents h5 {
+  font-weight: 900;
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+#autretalents > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  column-gap: 1em;
+}
+#param {
+  max-width: 550px;
+  min-width: 270px;
+  margin: 2em auto;
+}
+#param h1 {
+  font-size: 2.1em;
+  font-weight: 900;
+}
+#param > p {
+  margin-bottom: 1em;
+}
+#param form {
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+}
+#param form input {
+  margin-bottom: 0.6em;
+}
+#param form > div {
+  margin-top: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#param button {
+  display: block;
+  width: 30%;
+  font-size: 0.8em;
+}
+#param button.supp {
+  background: var(--black);
+  color: white;
+}
+footer {
+  width: 100%;
+  background: var(--blackTwo);
+  padding: 0.6rem 6%;
+  display: flex;
+  align-items: center;
+  margin-top: 5rem;
+}
+footer img {
+  width: 1.2rem;
+  margin-right: 0.5rem;
+}
+footer #copyright {
+  color: white;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+footer #copyright strong {
+  color: var(--mainRed);
+}
+footer #copyright span:last-child {
+  font-style: italic;
+}
+#main > img {
+  width: 1.5rem;
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  transform: translate(50%,-50%);
+}
+#alertbox {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background: var(--softblack);
+}
+#alertbox > div {
+  background: white;
+  border-radius: 10px;
+}
+#delaccount {
+  max-width: 450px;
+  min-width: 250px;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.whitecross {
+  width: 1em;
+  position: absolute;
+  top: -2em;
+  right: 0;
+}
+.redcross {
+  width: 2.2em;
+}
+.blackcross {
+  width: 0.9em;
+}
+#delaccount h5, #suppr h5 {
+  color: var(--mainRed);
+  font-size: 1.6em;
+  font-weight: 900;
+}
+#delaccount p {
+  text-align: center;
+  font-size: 0.9em;
+}
+#delaccount span {
+  font-weight: 900;
+}
+#delaccount > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3em;
+}
+#delaccount .btn {
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+}
+#delaccount .btn:first-of-type {
+  background: var(--black);
+}
+#modifNomFonction , 
+#suppr , 
+#editBio ,
+#addComp,
+#addForm,  
+#modifForm , 
+#addExp , 
+#modifExp ,
+#addCertif , 
+#modifCertif {
+  min-width: 250px;
+  max-width: 500px;
+}
+#updateComp {
+  min-width: 250px;
+  max-width: 600px;
+}
+#modifNomFonction > div:first-of-type, 
+#suppr > div:first-of-type,
+#addComp > div:first-of-type,
+#updateComp > div:first-of-type,  
+#editBio > div:first-of-type, 
+#modifForm > div:first-of-type,
+#addForm > div:first-of-type, 
+#addExp > div:first-of-type, 
+#modifExp > div:first-of-type,
+#addCertif > div:first-of-type, 
+#modifCertif > div:first-of-type {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 1.5em;
+  border-bottom: 1px solid var(--fontGray);
+}
+#suppr > div:nth-of-type(2) {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em 1.5em;
+}
+#suppr > div:last-of-type {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding: 1em 1.5em;
+}
+#modifNomFonction form,
+#addComp form ,
+#updateComp section,   
+#editBio form, 
+#modifForm form,
+#addForm form, 
+#addExp form, 
+#modifExp form,
+#addCertif form, 
+#modifCertif form {
+  width: 100%;
+  padding: 1em 1.5em 2em;
+  display: flex;
+  flex-direction: column;
+}
+#updateComp section > div {
+  width: 100%;
+  display: flex;
+  align-items: center; 
+  flex-wrap: wrap;
+  margin-bottom: 1.5em;
+  column-gap: 5%;
+}
+#updateComp p {
+  font-size: 0.85rem;
+  margin-left: 0.4em;
+}
+#updateComp .delComp {
+  width: max(30%, 150px);
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+#modifNomFonction form input,
+#addComp form input,  
+#editBio form input, 
+#modifForm form input,
+#addForm form input, 
+#addExp form input, 
+#modifExp form input,
+#addCertif form input, 
+#modifCertif form input {
+  margin-bottom: 0.5em;
+}
+form textarea, form select {
+  margin-bottom: 0.5em;
+}
+form span {
+  font-weight: 700;
+  font-size: 0.85em;
+}
+#modifNomFonction form button,
+#editBio form button,
+#addComp form button,
+#updateComp section button,
+#addForm form button, 
+#modifForm form button, 
+#addExp form button, 
+#modifExp form button,
+#addCertif form button,
+#modifCertif form button{
+  align-self: flex-end;
+}
+form select, form textarea {
+  background: var(--mainGray);
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+}
+form textarea {
+  height: 100px;
+}
+form > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5em;
+}
+form select {
+  width: 50%;
+}
+label[for=state] {
+  margin-bottom: 0.8em;
+  display: flex;
+  align-items: center;
+}
+.customCheckbox {
+  display: inline-block;
+  position: relative;
+}
+input[type=checkbox], .checkmark {
+  width: 15px;
+  height: 15px;
+}
+input[type=checkbox] {
+  opacity: 0;
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+.checkmark {
+  border: 2px solid var(--mainRed);
+  display: inline-block;
+  position: relative;
+  border-radius: 3px;
+  margin: 4px 0.5em 0 0;
+}
+.checkmark::after {
+  content: "";
+  display: none;
+  width: 3px;
+  height: 7px;
+  border: solid var(--mainRed);
+  border-width: 0 2px 2px 0;
+  position: absolute;
+  left: 3px;
+  top: 0;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+input[type=checkbox]:checked + .checkmark::after {
+  display: block;
+  margin: 0;
+}
+#talentprofile, #param, #alertbox {
+  display: none;
+}
+nav > div > ul .btn {
+  display: none;
+}
+#profile {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-left: 1em;
+  cursor: pointer;
+}
+#profile .pp {
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--mainRed);
+}
+#profile > img {
+  width: 0.6em;
+  margin-left: 3px;
+}
+#profile > ul {
+  display: none;
+  position: absolute;
+  width: 200px;
+  padding: 0.5em 0.7em;
+  bottom: 0;
+  right: 0;
+  transform: translateY(calc(100% + 1em));
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 3px 12px var(--black);
+}
+#profile > ul li {
+  background: var(--softGray);
+  padding: 0.5em 0.8em;
+  color: var(--black);
+  font-size: 0.8em;
+  font-weight: 700;
+  margin-bottom: 0.4em;
+  border-radius: 3px;
+}
+#profile > ul > li:last-child {
+  margin: 0;
+}
+#profile > ul li:hover {
+  background: var(--mainRed);
+  color: white;
 }

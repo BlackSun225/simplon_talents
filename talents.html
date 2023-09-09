@@ -21,27 +21,29 @@
         </div>
         <nav>
           <img alt="logo simplon" src="image/logoSimplon.png"/>
-          <ul>
-            <a href=""><li>Talents Accueil</li></a>
-            <a href=""><li>Nos Talents</li></a>
-            <a href=""><li>Contacts</li></a>
-            <a id="talentCo" class="btn" href=""><li>Se connecter</li></a>
-          </ul>
-          <div id="profile">
-            <div class="pic">
-              <img alt="" src="image/image4(4).png" />
-            </div>
-            <img alt="" src="image/arrowdownb.png"/>
+          <div>
             <ul>
-              <a href=""><li>Paramètres</li></a>
-              <a href=""><li>CV</li></a>
-              <a href=""><li>Déconnexion</li></a> 
+              <a href="index.html"><li>Talents Accueil</li></a>
+              <a class="active" href="talents.html"><li>Nos Talents</li></a>
+              <a href=""><li>Contacts</li></a>
+              <a id="talentCo" class="btn" href=""><li>Se connecter</li></a>
             </ul>
+            <div id="profile">
+              <div class="pp">
+                <img alt="" src="image/image4.png" />
+              </div>
+              <img alt="" src="image/arrowdownb.png"/>
+              <ul>
+                <a href="#param"><li>Paramètres</li></a>
+                <a href="#talentProfile"><li>CV</li></a>
+                <a href=""><li>Déconnexion</li></a> 
+              </ul>
+            </div>
           </div>
         </nav>
       </header>
 
-      <section>
+      <section id="talentSection">
         <div id="searchTalent">
           <h1>Retrouvez un talent</h1>
           <p>Retrouver rapidement un talent à partir du champs de recherche. 
@@ -56,8 +58,7 @@
         <div id="talentHome">
           <div id="talentList">
             <div class="talent">
-              <div class="talentPic">
-                <img alt="" src="image/image4(4).png" />
+              <div class="talentPic anoky">
               </div>
               <div class="talentInfos">
                 <h3 class="talentNom">Bénédicte Anoky</h3>
@@ -69,8 +70,7 @@
             </div>
 
             <div class="talent">
-              <div class="talentPic">
-                <img alt="" src="image/image4(1).png" />
+              <div class="talentPic arnold">
               </div>
               <div class="talentInfos">
                 <h3 class="talentNom">Arnold Lemann</h3>
@@ -82,8 +82,7 @@
             </div>
 
             <div class="talent">
-              <div class="talentPic">
-                <img alt="" src="image/image4(2).png" />
+              <div class="talentPic yvonne">
               </div>
               <div class="talentInfos">
                 <h3 class="talentNom">Yvonne Duma</h3>
@@ -95,8 +94,7 @@
             </div>
 
             <div class="talent">
-              <div class="talentPic">
-                <img alt="" src="image/christ.png" />
+              <div class="talentPic christ">
               </div>
               <div class="talentInfos">
                 <h3 class="talentNom">Christ Durvert</h3>
@@ -108,8 +106,7 @@
             </div>
 
             <div class="talent">
-              <div class="talentPic">
-                <img alt="" src="image/image4(3).png" />
+              <div class="talentPic snooky">
               </div>
               <div class="talentInfos">
                 <h3 class="talentNom">Snooky Rolande</h3>
@@ -121,8 +118,7 @@
             </div>
 
             <div class="talent">
-              <div class="talentPic">
-                <img alt="" src="image/image4smile.png" />
+              <div class="talentPic john">
               </div>
               <div class="talentInfos">
                 <h3 class="talentNom">John N'Guessan</h3>
@@ -134,8 +130,7 @@
             </div>
 
             <div class="talent">
-              <div class="talentPic">
-                <img alt="" src="image/image4dreads.png" />
+              <div class="talentPic rick">
               </div>
               <div class="talentInfos">
                 <h3 class="talentNom">Rick Rayan Koffi</h3>
@@ -147,8 +142,7 @@
             </div>
 
             <div class="talent">
-              <div class="talentPic">
-                <img alt="" src="image/image4hat.png" />
+              <div class="talentPic ada">
               </div>
               <div class="talentInfos">
                 <h3 class="talentNom">Ada Leonard</h3>
@@ -160,8 +154,7 @@
             </div>
 
             <div class="talent">
-              <div class="talentPic">
-                <img alt="" src="image/image4blue.png" />
+              <div class="talentPic koffi">
               </div>
               <div class="talentInfos">
                 <h3 class="talentNom">Koffi Willyams</h3>
@@ -172,9 +165,9 @@
               </div>
             </div>
           </div>
-          <div class="metier">
+          
+          <div id="metier">
             <h2>Métiers</h2>
-
             <div>
               <h3>Référent Digital</h3>
               <ul>
@@ -266,22 +259,24 @@
           <li>Suivant >></li>
         </ul>
 
-        <div id="profile">
+        <div id="talentprofile">
           <section id="banniere">
             <div class="pp">
-              <img alt="" src="image/image4(4).png" />
+              <img alt="" src="image/image4.png" />
             </div>
             <div>
               <h1>Bénédicte Anoky</h1>
               <h2>Cheffe de projet Digital</h2>
             </div>
-            <img alt="" src="image/group8.png" />
-            <img class="modif" alt="" src="image/writeIcon.png"/>
+            <img class="groupe8" alt="" src="image/group8.png" />
+            <div class="modif" >
+              <img alt="" src="image/writeIcon.png"/>
+            </div>
           </section>
     
           <section id="profilebio">
-            <div class="bio">
-              <span>Bio</span>
+            <div id="bio">
+              <h3>Bio</h3>
               <p>Je suis une cheffe de projet digital expérimentée, spécialisée dans la 
                 gestion de projets numériques. J'ai dirigé avec succès la mise en oeuvre 
                 de plusieurs initiatives stratégiques, en veillant à respecter les délais 
@@ -289,40 +284,164 @@
                 capacité à coordonner des équipes multidisciplinaires font de moi une 
                 professionnelle efficace et orientée résultats.
               </p>
-              <img class="modif write" alt="" src="image/writeIcon.png" />
+              <div class="modif">
+                <img class="write" alt="" src="image/writeIcon.png" />
+              </div>
             </div>
     
             <div id="cv">
-              <div id="cvComp">
-                <div>
-                  <h3>Compétences</h3>
-                  <div class="modif">
-                    <img class="write" alt="" src="image/writeIcon.png" />
-                    <span class="add">+</span>
+              <div>
+                <div id="cvComp">
+                  <div>
+                    <h3>Compétences</h3>
+                    <div>
+                      <div class="modif" ><img class="write" alt="" src="image/writeIcon.png" /></div>
+                      <div class="add modif">+</div >
+                    </div>
+                  </div>
+                  <p>13 compétences</p>
+                  <div id="compList">
+                    <span class="compBtn">Gestion de projet</span>
+                    <span class="compBtn">Wordpress</span>
+                    <span class="compBtn">Google Analytique</span>
+                    <span class="compBtn">Google Search Console</span>
+                    <span class="compBtn">HTML</span>
+                    <span class="compBtn">CSS</span>
+                    <span class="compBtn">JavaScript</span>
+                    <span class="compBtn">Marketing Digital</span>
+                    <span class="compBtn">Marketing</span>
+                    <span class="compBtn">Suivi et évaluation</span>
+                    <span class="compBtn">Analyse des besoins</span>
+                    <span class="compBtn">Esprit d'équipe</span>
+                    <span class="compBtn">Référencement</span>
                   </div>
                 </div>
-                <p>13 compétences</p>
-                <div id="compList">
-                  <span class="compBtn">Gestion de projet</span>
-                  <span class="compBtn">Wordpress</span>
-                  <span class="compBtn">Google Analytique</span>
-                  <span class="compBtn">Google Search Console</span>
-                  <span class="compBtn">HTML</span>
-                  <span class="compBtn">CSS</span>
-                  <span class="compBtn">JavaScript</span>
-                  <span class="compBtn">Marketing Digital</span>
-                  <span class="compBtn">Marketing</span>
-                  <span class="compBtn">Suivi et évaluation</span>
-                  <span class="compBtn">Analyse des besoins</span>
-                  <span class="compBtn">Esprit d'équipe</span>
-                  <span class="compBtn">Référencement</span>
+                <div id="cvExp">
+                  <div>
+                    <h3>Expérience professionnelle</h3>
+                    <span class="modif">+</span>
+                  </div>
+                  <div class="expItem">
+                    <span>E</span>
+                    <div>
+                      <div>
+                        <h4>Chef de Projet Digital</h4>
+                        <p>Temps plein | <span>DigitalTech Solutions</span></p>
+                        <p>Janvier 2018 - Mars 2022 . <span>2ans 10 mois</span></p>
+                        <p>Abidjan, Côte d'Ivoire</p>
+                      </div>
+                      <div>
+                        <div class="modif">
+                          <img alt="" src="image/writeIcon.png" />
+                        </div>
+                        <div class="modif">
+                          <img alt="" src="image/delete.png" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="expItem">
+                    <span>E</span>
+                    <div>
+                      <div>
+                        <h4>Chef de Projet Digital</h4>
+                        <p>Temps plein | <span>DigitalTech Solutions</span></p>
+                        <p>Janvier 2018 - Mars 2022 . <span>2ans 10 mois</span></p>
+                        <p>Abidjan, Côte d'Ivoire</p>
+                      </div>
+                      <div>
+                        <div class="modif">
+                          <img alt="" src="image/writeIcon.png" />
+                        </div>
+                        <div class="modif">
+                          <img alt="" src="image/delete.png" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="expItem">
+                    <span>E</span>
+                    <div>
+                      <div>
+                        <h4>Chef de Projet Digital</h4>
+                        <p>Temps plein | <span>DigitalTech Solutions</span></p>
+                        <p>Janvier 2018 - Mars 2022 . <span>2ans 10 mois</span></p>
+                        <p>Abidjan, Côte d'Ivoire</p>
+                      </div>
+                      <div>
+                        <div class="modif">
+                          <img alt="" src="image/writeIcon.png" />
+                        </div>
+                        <div class="modif">
+                          <img alt="" src="image/delete.png" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="expItem">
+                    <span>E</span>
+                    <div>
+                      <div>
+                        <h4>Chef de Projet Digital</h4>
+                        <p>Temps plein | <span>DigitalTech Solutions</span></p>
+                        <p>Janvier 2018 - Mars 2022 . <span>2ans 10 mois</span></p>
+                        <p>Abidjan, Côte d'Ivoire</p>
+                      </div>
+                      <div>
+                        <div class="modif">
+                          <img alt="" src="image/writeIcon.png" />
+                        </div>
+                        <div class="modif">
+                          <img alt="" src="image/delete.png" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="expItem">
+                    <span>E</span>
+                    <div>
+                      <div>
+                        <h4>Chef de Projet Digital</h4>
+                        <p>Temps plein | <span>DigitalTech Solutions</span></p>
+                        <p>Janvier 2018 - Mars 2022 . <span>2ans 10 mois</span></p>
+                        <p>Abidjan, Côte d'Ivoire</p>
+                      </div>
+                      <div>
+                        <div class="modif">
+                          <img alt="" src="image/writeIcon.png" />
+                        </div>
+                        <div class="modif">
+                          <img alt="" src="image/delete.png" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="expItem">
+                    <span>E</span>
+                    <div>
+                      <div>
+                        <h4>Chef de Projet Digital</h4>
+                        <p>Temps plein | <span>DigitalTech Solutions</span></p>
+                        <p>Janvier 2018 - Mars 2022 . <span>2ans 10 mois</span></p>
+                        <p>Abidjan, Côte d'Ivoire</p>
+                      </div>
+                      <div>
+                        <div class="modif">
+                          <img alt="" src="image/writeIcon.png" />
+                        </div>
+                        <div class="modif">
+                          <img alt="" src="image/delete.png" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-    
-              <div id="cvForm">
+              <div>
+                <div id="cvForm">
                 <div>
                   <h3>Formation</h3>
-                  <span class="modif add">+</span>
+                  <div class="modif add">+</div>
                 </div>
                 <div class="formItem">
                   <span>F</span>
@@ -333,9 +452,13 @@
                       <p>Sept. 2020 - Avr. 2021</p>
                       <p>Niveau: BAC+3</p>
                     </div>
-                    <div class="modif">
-                      <img class="write" alt="" src="image/writeIcon.png" />
-                      <img class="delete" alt="" src="image/delete.png" />
+                    <div>
+                      <div class="modif">
+                        <img class="write" alt="" src="image/writeIcon.png" />
+                      </div>
+                      <div class="modif">
+                        <img class="delete" alt="" src="image/delete.png" />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -349,9 +472,13 @@
                       <p>Sept. 2019 - Avr. 2020</p>
                       <p>Niveau: BAC+2</p>
                     </div>
-                    <div class="modif">
-                      <img class="write" alt="" src="image/writeIcon.png" />
-                      <img class="delete" alt="" src="image/delete.png" />
+                    <div>
+                      <div class="modif">
+                        <img class="write" alt="" src="image/writeIcon.png" />
+                      </div>
+                      <div class="modif">
+                        <img class="delete" alt="" src="image/delete.png" />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -365,111 +492,17 @@
                       <p>Sept. 2020 - Avr. 2021</p>
                       <p>Niveau: BAC</p>
                     </div>
-                    <div class="modif">
-                      <img class="write" alt="" src="image/writeIcon.png" />
-                      <img class="delete" alt="" src="image/delete.png" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-    
-              <div id="cvExp">
-                <div>
-                  <h3>Expérience professionnelle</h3>
-                  <span class="modif">+</span>
-                </div>
-                <div class="expItem">
-                  <span>E</span>
-                  <div>
                     <div>
-                      <h4>Chef de Projet Digital</h4>
-                      <p>Temps plein | <span>DigitalTech Solutions</span></p>
-                      <p>Janvier 2018 - Mars 2022 . <span>2ans 10 mois</span></p>
-                      <p>Abidjan, Côte d'Ivoire</p>
-                    </div>
-                    <div class="modif">
-                      <img alt="" src="image/writeIcon.png" />
-                      <img alt="" src="image/delete.png" />
+                      <div class="modif">
+                        <img class="write" alt="" src="image/writeIcon.png" />
+                      </div>
+                      <div class="modif">
+                        <img class="delete" alt="" src="image/delete.png" />
+                      </div> 
                     </div>
                   </div>
                 </div>
-                <div class="expItem">
-                  <span>E</span>
-                  <div>
-                    <div>
-                      <h4>Chef de Projet Digital</h4>
-                      <p>Temps plein | <span>DigitalTech Solutions</span></p>
-                      <p>Janvier 2018 - Mars 2022 . <span>2ans 10 mois</span></p>
-                      <p>Abidjan, Côte d'Ivoire</p>
-                    </div>
-                    <div class="modif">
-                      <img alt="" src="image/writeIcon.png" />
-                      <img alt="" src="image/delete.png" />
-                    </div>
-                  </div>
-                </div>
-                <div class="expItem">
-                  <span>E</span>
-                  <div>
-                    <div>
-                      <h4>Chef de Projet Digital</h4>
-                      <p>Temps plein | <span>DigitalTech Solutions</span></p>
-                      <p>Janvier 2018 - Mars 2022 . <span>2ans 10 mois</span></p>
-                      <p>Abidjan, Côte d'Ivoire</p>
-                    </div>
-                    <div class="modif">
-                      <img alt="" src="image/writeIcon.png" />
-                      <img alt="" src="image/delete.png" />
-                    </div>
-                  </div>
-                </div>
-                <div class="expItem">
-                  <span>E</span>
-                  <div>
-                    <div>
-                      <h4>Chef de Projet Digital</h4>
-                      <p>Temps plein | <span>DigitalTech Solutions</span></p>
-                      <p>Janvier 2018 - Mars 2022 . <span>2ans 10 mois</span></p>
-                      <p>Abidjan, Côte d'Ivoire</p>
-                    </div>
-                    <div class="modif">
-                      <img alt="" src="image/writeIcon.png" />
-                      <img alt="" src="image/delete.png" />
-                    </div>
-                  </div>
-                </div>
-                <div class="expItem">
-                  <span>E</span>
-                  <div>
-                    <div>
-                      <h4>Chef de Projet Digital</h4>
-                      <p>Temps plein | <span>DigitalTech Solutions</span></p>
-                      <p>Janvier 2018 - Mars 2022 . <span>2ans 10 mois</span></p>
-                      <p>Abidjan, Côte d'Ivoire</p>
-                    </div>
-                    <div class="modif">
-                      <img alt="" src="image/writeIcon.png" />
-                      <img alt="" src="image/delete.png" />
-                    </div>
-                  </div>
-                </div>
-                <div class="expItem">
-                  <span>E</span>
-                  <div>
-                    <div>
-                      <h4>Chef de Projet Digital</h4>
-                      <p>Temps plein | <span>DigitalTech Solutions</span></p>
-                      <p>Janvier 2018 - Mars 2022 . <span>2ans 10 mois</span></p>
-                      <p>Abidjan, Côte d'Ivoire</p>
-                    </div>
-                    <div class="modif">
-                      <img alt="" src="image/writeIcon.png" />
-                      <img alt="" src="image/delete.png" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-    
+              </div>   
               <div id="certif">
                 <div>
                   <h3>Licenses & Certifications</h3>
@@ -484,9 +517,13 @@
                       <p>Date de délivrance:</p>
                       <p>Juillet 2022</p>
                     </div>
-                    <div class="modif">
-                      <img alt="" src="image/writeIcon.png" />
-                      <img alt="" src="image/delete.png" />
+                    <div>
+                      <div class="modif">
+                        <img alt="" src="image/writeIcon.png" />
+                      </div>
+                      <div class="modif">
+                        <img alt="" src="image/delete.png" />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -500,9 +537,13 @@
                       <p>Date de délivrance:</p>
                       <p>Septembre 2022</p>
                     </div>
-                    <div class="modif">
-                      <img alt="" src="image/writeIcon.png" />
-                      <img alt="" src="image/delete.png" />
+                    <div>
+                      <div class="modif">
+                        <img alt="" src="image/writeIcon.png" />
+                      </div>
+                      <div class="modif">
+                        <img alt="" src="image/delete.png" />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -516,9 +557,13 @@
                       <p>Date de délivrance:</p>
                       <p>Mai 2021</p>
                     </div>
-                    <div class="modif">
-                      <img alt="" src="image/writeIcon.png" />
-                      <img alt="" src="image/delete.png" />
+                    <div>
+                      <div class="modif">
+                        <img alt="" src="image/writeIcon.png" />
+                      </div>
+                      <div class="modif">
+                        <img alt="" src="image/delete.png" />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -532,21 +577,27 @@
                       <p>Date de délivrance:</p>
                       <p>Avril 2013</p>
                     </div>
-                    <div class="modif">
-                      <img alt="" src="image/writeIcon.png" />
-                      <img alt="" src="image/delete.png" />
+                    <div>
+                      <div class="modif">
+                        <img alt="" src="image/writeIcon.png" />
+                      </div>
+                      <div class="modif">
+                        <img alt="" src="image/delete.png" />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+                
+              </div>
+              
             </div>
     
             <div id="autretalents">
               <h5>Talents similaires</h5>
               <div>
                   <div class="talent">
-                    <div class="talentPic">
-                      <img alt="" src="image/christ.png" />
+                    <div class="talentPic christ">
                     </div>
                     <div class="talentInfos">
                       <h3 class="talentNom">Christ Durvert</h3>
@@ -557,8 +608,7 @@
                     </div>
                   </div>
                   <div class="talent">
-                    <div class="talentPic">
-                      <img alt="" src="image/image4(3).png" />
+                    <div class="talentPic snooky">
                     </div>
                     <div class="talentInfos">
                       <h3 class="talentNom">Snooky Rolande</h3>
@@ -569,8 +619,7 @@
                     </div>
                   </div>
                   <div class="talent">
-                    <div class="talentPic">
-                      <img alt="" src="image/image4(1).png" />
+                    <div class="talentPic arnold">
                     </div>
                     <div class="talentInfos">
                       <h3 class="talentNom">Arnold Lemann</h3>
@@ -581,8 +630,7 @@
                     </div>
                   </div>
                   <div class="talent">
-                    <div class="talentPic">
-                      <img alt="" src="image/image4(2).png" />
+                    <div class="talentPic yvonne">
                     </div>
                     <div class="talentInfos">
                       <h3 class="talentNom">Yvonne Duma</h3>
@@ -614,67 +662,608 @@
           </section>
         </div>
       </section>
+
       <footer>
         <img alt="" src="image/logoSimplonSmall.png"/>
-        <p id="copyright">Copyright: &amp; <span id="year">2023</span> <strong>Simplon Côte d'Ivoire</strong> <span>Tous droits réservés</span>.</p>  
+        <p id="copyright">Copyright: &amp; <span id="year">2023</span> <strong>Simplon Côte d'Ivoire</strong> | <span>Tous droits réservés</span>.</p>  
       </footer>
 
-      <img class="group8" alt="" src="image/group8.png"/>
-
-      <div class="alertbox">
-        <div class="suppaccount">
-          <span class="whitecross"></span>
-          <div class="crosscircle">
-            <span class="redcross"></span>
-          </div>
-          <h5>ATTENTION !!!</h5>
-          <p>Vous procédez à la suppression de votre profil. 
-            En cas d'erreur, veuillez fermez cette fenêtre. Si vous êtes sûr 
-            de vouloir supprimer votre compte, cliquez sur le bouton
-          </p>
-          <span>"supprimer".</span>
-          <div>
-            <a href="">Supprimer</a>
-            <a href="">Annuler</a>
-          </div>
-        </div>
-
-        <div class="nometfonction">
+      <div id="alertbox">
+        <div id="modifNomFonction">
           <div>
             <h4>Modifiez votre nom et votre fonction</h4>
-            <span class="blackCross"></span>
+            <img class="blackcross" src="image/blackcross.png" alt="" >
           </div>
           <form action="">
             <input type="text" placeholder="Nom et prénom" />
             <input type="text" placeholder="Fonction à présenter aux recruteurs" />
-            <button type="submit">Valider</button>
+            <button class="btn" type="submit">Valider</button>
           </form>        
+        </div>
+
+        <div id="delaccount">
+          <img class="whitecross" src="image/whitecross.png" alt="">
+          <img class="redcross" src="image/redcross.png"  alt="" />
+          <h5>ATTENTION !!!</h5>
+          <p>Vous procédez à la suppression de votre profil. 
+            En cas d'erreur, veuillez fermer cette fenêtre. Si vous êtes sûr 
+            de vouloir supprimer votre compte, cliquez sur le bouton
+          </p>
+          <span>"supprimer".</span>
+          <div>
+            <button class="btn" href="">Supprimer</button>
+            <button class="btn" href="">Annuler</button>
+          </div>
         </div> 
         
-        <div class="suppression">
+        <div id="suppr">
           <div>
             <h4>Suppression</h4>
-            <span class="blackCross"></span>
+            <img class="blackcross" src="image/blackcross.png" alt="" >
           </div>
-          <div class="crosscircle">
-            <span class="redcross"></span>
-          </div>
-          <h5>ATTENTION !!!</h5>
-          <p>Etes vous réellement sûr de vouloir supprimer cet élément?</p>
           <div>
-            <a href="">Supprimer</a>
-            <a href="">Annuler</a>
+            <img class="redcross" src="image/redcross.png"  alt="" />
+            <h5>ATTENTION !!!</h5>
+            <p>Etes vous réellement sûr de vouloir supprimer cet élément?</p>
+          </div>
+          <div>
+            <a class="btn" href="">Supprimer</a>
+            <a class="btn" href="">Annuler</a>
           </div>    
         </div>
 
-        <div class="editBio">
+        <div id="editBio">
           <div>
-            <h4>Suppression</h4>
-            <span class="blackCross"></span>
+            <h4>Modifiez votre Bio</h4>
+            <img class="blackcross" src="image/blackcross.png" alt="" >
           </div>
           <form action="">
             <textarea placeholder="Entrez votre bio" ></textarea>
-            <button type="submit">Valider</button>
+            <button class="btn" type="submit">Valider</button>
+          </form>
+        </div>
+
+        <div id="addComp">
+          <div>
+            <h4>Ajoutez une compétence</h4>
+            <img class="blackcross" src="image/blackcross.png" alt="" >
+          </div>
+          <form action="">
+            <input name="comp" placeholder="Compétence" type="text">
+            <button class="btn">Valider</button>
+          </form>
+        </div>
+
+        <div id="updateComp">
+          <div>
+            <h4>Mise à jour des compétences</h4>
+            <img class="blackcross" src="image/blackcross.png" alt="" >
+          </div>
+          <section>
+            <div>
+              <div class="delComp">
+                <div class="modif">
+                  <img src="image/delete.png" alt="" />
+                </div>
+                <p>Gestion de projet</p>
+              </div>
+              <div class="delComp">
+                <div class="modif">
+                  <img src="image/delete.png" alt="" />
+                </div>
+                <p>Analyse des besoins</p>
+              </div>
+              <div class="delComp">
+                <div class="modif">
+                  <img src="image/delete.png" alt="" />
+                </div>
+                <p>Google Analytique</p>
+              </div>
+              <div class="delComp">
+                <div class="modif">
+                  <img src="image/delete.png" alt="" />
+                </div>
+                <p>Marketing Digital</p>
+              </div>
+              <div class="delComp">
+                <div class="modif">
+                  <img src="image/delete.png" alt="" />
+                </div>
+                <p>CSS</p>
+              </div>
+              <div class="delComp">
+                <div class="modif">
+                  <img src="image/delete.png" alt="" />
+                </div>
+                <p>HTML</p>
+              </div>
+              <div class="delComp">
+                <div class="modif">
+                  <img src="image/delete.png" alt="" />
+                </div>
+                <p>Référencement</p>
+              </div>
+              <div class="delComp">
+                <div class="modif">
+                  <img src="image/delete.png" alt="" />
+                </div>
+                <p>JavaScript</p>
+              </div>
+              <div class="delComp">
+                <div class="modif">
+                  <img src="image/delete.png" alt="" />
+                </div>
+                <p>Wordpress</p>
+              </div>
+              <div class="delComp">
+                <div class="modif">
+                  <img src="image/delete.png" alt="" />
+                </div>
+                <p>Suivi et évaluation</p>
+              </div>
+              <div class="delComp">
+                <div class="modif">
+                  <img src="image/delete.png" alt="" />
+                </div>
+                <p>Esprit d'équipe</p>
+              </div>
+            </div>
+            <button class="btn">Ajouter une compétence</button>
+          </section>
+        </div>
+
+        <div id="addForm">
+          <div>
+            <h4>Ajoutez formation</h4>
+            <img class="blackcross" src="image/blackcross.png" alt="" >
+          </div>
+          <form action="">
+            <span>Date de début</span>
+            <input name="etablissement" placeholder="Ecole: Ex. Université Felix Houphouet Boigny" type="text">
+            <input name="diplome" placeholder="Diplôme: Ex. Licence" type="text">
+            <input name="domaine" placeholder="Domaine d'étude: Ex. BTP" type="text">
+            <div>
+              <select name="debmonth" id="debmonth">
+                <option value="Janvier">Janvier</option>
+                <option value="Fevrier">Fevrier</option>
+                <option value="Mars">Mars</option>
+                <option value="Avril">Avril</option>
+                <option value="Mai">Mai</option>
+                <option value="Juin">Juin</option>
+                <option value="Juillet">Juillet</option>
+                <option value="Août">Août</option>
+                <option value="Septembre">Septembre</option>
+                <option value="Octobre">Octobre</option>
+                <option value="Novembre">Novembre</option>
+                <option value="Decembre">Decembre</option>
+              </select>
+              <select name="debyear" id="debyear">
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+              </select>
+            </div>
+            <span>Date de fin (ou prévue)</span>
+            <div>
+              <select name="endmonth" id="endmonth">
+                <option value="Janvier">Janvier</option>
+                <option value="Fevrier">Fevrier</option>
+                <option value="Mars">Mars</option>
+                <option value="Avril">Avril</option>
+                <option value="Mai">Mai</option>
+                <option value="Juin">Juin</option>
+                <option value="Juillet">Juillet</option>
+                <option value="Août">Août</option>
+                <option value="Septembre">Septembre</option>
+                <option value="Octobre">Octobre</option>
+                <option value="Novembre">Novembre</option>
+                <option value="Decembre">Decembre</option>
+              </select>
+              <select name="endyear" id="endyear">
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+              </select>
+            </div>
+            <textarea placeholder="Description">
+            </textarea>
+            <button class="btn" type="submit">Valider</button>
+          </form>
+        </div>
+
+        <div id="modifForm">
+          <div>
+            <h4>Modification de formation</h4>
+            <img class="blackcross" src="image/blackcross.png" alt="" >
+          </div>
+          <form action="">
+            <input type="text" name="bailleur" value="MTN ACADEMY By Simplon" >
+            <input type="text" name="certif" value="Certificat de Référent Digital" />
+            <input type="text" name="domaine" value="Numérique" />
+            <span>Date de début</span>
+            <div>
+              <select name="debmonth" id="debmonth">
+                <option value="Septembre">Septembre</option>
+                <option value="Janvier">Janvier</option>
+                <option value="Fevrier">Fevrier</option>
+                <option value="Mars">Mars</option>
+                <option value="Avril">Avril</option>
+                <option value="Mai">Mai</option>
+                <option value="Juin">Juin</option>
+                <option value="Juillet">Juillet</option>
+                <option value="Août">Août</option>
+                <option value="Octobre">Octobre</option>
+                <option value="Novembre">Novembre</option>
+                <option value="Decembre">Decembre</option>
+              </select>
+              <select name="debyear" id="debyear">
+                <option value="2020">2020</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+              </select>
+            </div>
+            <span>Date de fin (ou prévue)</span>
+            <div>
+              <select name="endmonth" id="endmonth">
+                <option value="Avril">Avril</option>
+                <option value="Janvier">Janvier</option>
+                <option value="Fevrier">Fevrier</option>
+                <option value="Mars">Mars</option>
+                <option value="Mai">Mai</option>
+                <option value="Juin">Juin</option>
+                <option value="Juillet">Juillet</option>
+                <option value="Août">Août</option>
+                <option value="Septembre">Septembre</option>
+                <option value="Octobre">Octobre</option>
+                <option value="Novembre">Novembre</option>
+                <option value="Decembre">Decembre</option>
+              </select>
+              <select name="endyear" id="endyear">
+                <option value="2021">2021</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+              </select>
+            </div>
+            <textarea placeholder="Description">
+            </textarea>
+            <button class="btn" type="submit">Valider</button>
+          </form>
+        </div>
+
+        <div id="addExp">
+          <div>
+            <h4>Ajouter une expérience professionnelle</h4>
+            <img class="blackcross" src="image/blackcross.png" alt="" >
+          </div>
+          <form action="">
+            <input type="text" name="poste" placeholder="Intitulé de poste: Ex, Chef de projet Digital" >
+            <label for="jobType">Type d'emploi</label>
+            <select name="jobType" id="jobType">
+              <option value="cdi">CDI</option>
+              <option value="cdd">CDD</option>
+              <option value="alternance">Alternance</option>
+              <option value="stage">Stage</option>
+            </select>
+            <input type="text" name="entreprise" placeholder="Nom de l'entreprise: Ex. Simplon Côte d'Ivoire" />
+            <label for="state">
+              <span class="customCheckbox">
+                <input type="checkbox"  name="state" />
+                <span class="checkmark"></span>
+              </span>
+              J'occupe ce poste actuellement
+            </label>
+            <input type="text" id="sector" name="sector" placeholder="Secteur d'activité">
+            <span class="label">Date de début</span>
+            <div>
+              <select name="expdebmonth" id="expdebmonth">
+                <option value="Janvier">Janvier</option>
+                <option value="Fevrier">Fevrier</option>
+                <option value="Mars">Mars</option>
+                <option value="Avril">Avril</option>
+                <option value="Mai">Mai</option>
+                <option value="Juin">Juin</option>
+                <option value="Juillet">Juillet</option>
+                <option value="Août">Août</option>
+                <option value="Septembre">Septembre</option>
+                <option value="Octobre">Octobre</option>
+                <option value="Novembre">Novembre</option>
+                <option value="Decembre">Decembre</option>
+              </select>
+              <select name="expdebyear" id="expdebyear">
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+              </select>
+            </div>
+            <span class="label">Date de fin (ou prévue)</span>
+            <div>
+              <select name="expendmonth" id="expendmonth">
+                <option value="Janvier">Janvier</option>
+                <option value="Fevrier">Fevrier</option>
+                <option value="Mars">Mars</option>
+                <option value="Avril">Avril</option>
+                <option value="Mai">Mai</option>
+                <option value="Juin">Juin</option>
+                <option value="Juillet">Juillet</option>
+                <option value="Août">Août</option>
+                <option value="Septembre">Septembre</option>
+                <option value="Octobre">Octobre</option>
+                <option value="Novembre">Novembre</option>
+                <option value="Decembre">Decembre</option>
+              </select>
+              <select name="expendyear" id="expendyear">
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+              </select>
+            </div>
+            <textarea placeholder="Description">
+            </textarea>
+            <button class="btn" type="submit">Valider</button>
+          </form>
+        </div>
+
+        <div id="modifExp">
+          <div>
+            <h4>Modifier une expérience professionnelle</h4>
+            <img class="blackcross" src="image/blackcross.png" alt="" >
+          </div>
+          <form action="">
+            <input type="text" name="poste" value="Chef de projet Digital" >
+            <label for="jobType">Type d'emploi</label>
+            <select name="jobType" id="jobType" value="temps plein" >
+              <option value="cdi">CDI</option>
+              <option value="cdd">CDD</option>
+              <option value="alternance">Alternance</option>
+              <option value="stage">Stage</option>
+              <option value="temps plein">Temps plein</option>
+            </select>
+            <input type="text" name="entreprise" value="DigitalTech Solutions" />
+            <label for="state">
+              <span class="customCheckbox">
+                <input type="checkbox"  name="state" />
+                <span class="checkmark"></span>
+              </span>
+              J'occupe ce poste actuellement
+            </label>
+            <input type="text" id="sector" name="sector" value="Secteur d'activité">
+            <span class="label">Date de début</span>
+            <div>
+              <select name="expdebmonth" id="expdebmonth">
+                <option value="Janvier">Janvier</option>
+                <option value="Fevrier">Fevrier</option>
+                <option value="Mars">Mars</option>
+                <option value="Avril">Avril</option>
+                <option value="Mai">Mai</option>
+                <option value="Juin">Juin</option>
+                <option value="Juillet">Juillet</option>
+                <option value="Août">Août</option>
+                <option value="Septembre">Septembre</option>
+                <option value="Octobre">Octobre</option>
+                <option value="Novembre">Novembre</option>
+                <option value="Decembre">Decembre</option>
+              </select>
+              <select name="expdebyear" id="expdebyear">
+                <option value="2018">2018</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+              </select>
+            </div>
+            <span class="label">Date de fin (ou prévue)</span>
+            <div>
+              <select name="expendmonth" id="expendmonth">
+                <option value="Mars">Mars</option>
+                <option value="Janvier">Janvier</option>
+                <option value="Fevrier">Fevrier</option>
+                <option value="Avril">Avril</option>
+                <option value="Mai">Mai</option>
+                <option value="Juin">Juin</option>
+                <option value="Juillet">Juillet</option>
+                <option value="Août">Août</option>
+                <option value="Septembre">Septembre</option>
+                <option value="Octobre">Octobre</option>
+                <option value="Novembre">Novembre</option>
+                <option value="Decembre">Decembre</option>
+              </select>
+              <select name="expendyear" id="expendyear">
+                <option value="2022">2022</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2023">2023</option>
+              </select>
+            </div>
+            <textarea placeholder="Description">
+            </textarea>
+            <button class="btn" type="submit">Valider</button>
+          </form>
+        </div>
+
+        <div id="addCertif">
+          <div>
+            <h4>Ajouter une licence ou une certification</h4>
+            <img class="blackcross" src="image/blackcross.png" alt="" >
+          </div>
+          <form action="">
+            <input placeholder="Nom: Ex. Les Fondamentaux du numérique" type="text" name="certifTitle" >         
+            <input placeholder="Organisme de délivrance : Ex. Google" type="text" name="certifDeliver" >
+            <span class="label">Date d'émission</span>
+            <div>
+              <select name="expdebmonth" id="expdebmonth">
+                <option value="Janvier">Janvier</option>
+                <option value="Fevrier">Fevrier</option>
+                <option value="Mars">Mars</option>
+                <option value="Avril">Avril</option>
+                <option value="Mai">Mai</option>
+                <option value="Juin">Juin</option>
+                <option value="Juillet">Juillet</option>
+                <option value="Août">Août</option>
+                <option value="Septembre">Septembre</option>
+                <option value="Octobre">Octobre</option>
+                <option value="Novembre">Novembre</option>
+                <option value="Decembre">Decembre</option>
+              </select>
+              <select name="expdebyear" id="expdebyear">
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+              </select>
+            </div>
+            <span class="label">Date d'expiration</span>
+            <div>
+              <select name="expendmonth" id="expendmonth">
+                <option value="Janvier">Janvier</option>
+                <option value="Fevrier">Fevrier</option>
+                <option value="Mars">Mars</option>
+                <option value="Avril">Avril</option>
+                <option value="Mai">Mai</option>
+                <option value="Juin">Juin</option>
+                <option value="Juillet">Juillet</option>
+                <option value="Août">Août</option>
+                <option value="Septembre">Septembre</option>
+                <option value="Octobre">Octobre</option>
+                <option value="Novembre">Novembre</option>
+                <option value="Decembre">Decembre</option>
+              </select>
+              <select name="expendyear" id="expendyear">
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+              </select>
+            </div>
+            <input placeholder="ID du diplôme" type="text" name="iddiplome" />
+            <input placeholder="URL du diplôme" type="text" name="urldiplome">
+            <button class="btn" type="submit">Valider</button>
+          </form>
+        </div>
+
+        <div id="modifCertif">
+          <div>
+            <h4>Modification de Licence ou Certification</h4>
+            <img class="blackcross" src="image/blackcross.png" alt="" >
+          </div>
+          <form action="">
+            <input value="Stratégie de Communication Digitale" type="text" name="certifTitle" >         
+            <input value="Ecole de Management ESI" type="text" name="certifDeliver" >
+            <span class="label">Date d'émission</span>
+            <div>
+              <select name="expdebmonth" id="expdebmonth">
+                <option value="Janvier">Janvier</option>
+                <option value="Fevrier">Fevrier</option>
+                <option value="Mars">Mars</option>
+                <option value="Avril">Avril</option>
+                <option value="Mai">Mai</option>
+                <option value="Juin">Juin</option>
+                <option value="Juillet">Juillet</option>
+                <option value="Août">Août</option>
+                <option value="Septembre">Septembre</option>
+                <option value="Octobre">Octobre</option>
+                <option value="Novembre">Novembre</option>
+                <option value="Decembre">Decembre</option>
+              </select>
+              <select name="expdebyear" id="expdebyear">
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+              </select>
+            </div>
+            <span class="label">Date d'expiration</span>
+            <div>
+              <select name="expendmonth" id="expendmonth">
+                <option value="Janvier">Janvier</option>
+                <option value="Fevrier">Fevrier</option>
+                <option value="Mars">Mars</option>
+                <option value="Avril">Avril</option>
+                <option value="Mai">Mai</option>
+                <option value="Juin">Juin</option>
+                <option value="Juillet">Juillet</option>
+                <option value="Août">Août</option>
+                <option value="Septembre">Septembre</option>
+                <option value="Octobre">Octobre</option>
+                <option value="Novembre">Novembre</option>
+                <option value="Decembre">Decembre</option>
+              </select>
+              <select name="expendyear" id="expendyear">
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+              </select>
+            </div>
+            <input placeholder="ID du diplôme" type="text" name="iddiplome" />
+            <input placeholder="URL du diplôme" type="text" name="urldiplome">
+            <button class="btn" type="submit">Valider</button>
           </form>
         </div>
       </div>
