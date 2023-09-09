@@ -84,7 +84,7 @@ nav > div > ul {
 }
 nav > div > ul a {
   color: var(--black);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 700;
   margin-left: 1rem;
 }
@@ -687,12 +687,14 @@ footer img {
 footer #copyright {
   color: white;
   font-weight: 400;
+}
+#copyright {
   font-size: 0.8rem;
 }
-footer #copyright strong {
+#copyright strong {
   color: var(--mainRed);
 }
-footer #copyright span:last-child {
+#copyright span:last-child {
   font-style: italic;
 }
 #main > img {
@@ -943,11 +945,8 @@ input[type=checkbox]:checked + .checkmark::after {
 #talentprofile, #param, #alertbox {
   display: none;
 }
-nav > div > ul .btn {
-  display: none;
-}
 #profile {
-  display: flex;
+  display: none;
   position: relative;
   align-items: center;
   margin-left: 1em;
@@ -989,4 +988,153 @@ nav > div > ul .btn {
 #profile > ul li:hover {
   background: var(--mainRed);
   color: white;
+}
+#comain {
+  width: 100vw;
+  max-width: 1440px;
+  height: 100vh;
+  max-height: 900px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+#comain > img {
+  width: 2em;
+  position: absolute;
+  left: 6%;
+  top: 2em;
+  z-index: 5;
+}
+#comain h1 {
+  font-weight: 900;
+  font-size: 2.7em;
+  line-height: 1em;
+}
+#comain > div p {
+  margin-bottom: 1.5em;
+}
+#comain a {
+  color: var(--black);
+  font-weight: 700;
+  font-size: 0.9em;
+  text-decoration: underline;
+  margin-top: 0.8em;
+}
+#comain .btn {
+  margin-top: 1.5em;
+}
+@keyframes movecopyrightleft {
+  0% {left: 51%;}
+  100% {left: 6%;}
+}
+@keyframes movecopyrightright {
+  0% {left: 6%;}
+  100% {left: 51%;}
+}
+#comain #copyright {
+  position: absolute;
+  bottom: 1em;
+  left: 51%;
+  z-index: 5;
+  color: black;
+  font-weight: 700;
+  animation-duration: 1s;
+}
+#comain #copyright strong {
+  font-weight: 900;
+}
+@keyframes disappear {
+  0% {opacity: 1; width: 55%;}
+  50%{opacity: 0.7; width: 55%;}
+  75% {width: 55%;}
+  100%{opacity: 1; width: 45%;}
+}
+#co, #reg {
+  height: 100%;
+  background: white;
+  animation-duration: 1s;
+}
+#co, #comain form, #reg {
+  display: flex;
+  flex-direction: column;
+}
+#co {
+  width: 55%;
+  padding: 0 6%;
+  justify-content: center;
+}
+#comain form {
+  width: 100%;
+  align-items: flex-start;
+}
+#comain form input, #comain form select {
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+#reg {
+  width: 45%;
+  justify-content: center;
+  padding: 0 6%;
+}
+#reg h1 {
+  margin-bottom: 0.3em;
+}
+.reg {
+  display: none;
+}
+#co button:hover, #reg button:hover {
+  background: var(--black);
+  color: white;
+}
+@keyframes slideright {
+  0% {left: 0; background: var(--mainRed); background-position: left bottom; opacity: 1}
+  50% {opacity: 0.5;}
+  100% {left: 55%; background: var(--black); background-position: right bottom; opacity: 1;}
+}
+@keyframes slideleft {
+  0% {left: 55%; background: var(--black); background-position: right bottom; opacity: 1;}
+  50% {opacity: 0.7;}
+  100% {left: 0; background: var(--mainRed); background-position: left bottom; opacity: 1;}
+}
+#slide {
+  width: 45%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  background: var(--mainRed) url("image/pictogram.png") no-repeat;
+  background-size: 65%;
+  background-position: left bottom;
+  color: white;
+  padding: 0 6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation-duration: 1s;
+}
+#slide h1 {
+  width: 80%;
+  margin-bottom: 0.4em;
+}
+#slide p {
+  font-weight: 500;
+}
+#slide .msg {
+  margin-bottom: 3em;
+}
+#slide .btn {
+  width: 32%;
+  text-align: center;
+}
+#slide .btn:hover {
+  background: white;
+  color: var(--mainRed);
+  font-weight: 800;
+}
+#slide > span.co {
+  background: var(--black);
+}
+#slide > span.reg {
+  background: var(--mainRed);
 }

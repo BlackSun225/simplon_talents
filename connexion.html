@@ -9,27 +9,59 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div id="main">
-      <div id="coleft">
-        <img alt="" src="image/smalllogowhite.png" />
-        <h1>Bon retour parmis nous !</h1>
-        <p>Oooups... Tu n'as pas encore de compte alors que tu es un alumnus 
-            de Simplon Côte d'Ivoire ?
+    <div id="comain">
+      <img class="topimg co" src="image/smalllogowhite.png" alt="" >
+      <img class="topimg reg" src="image/logoSimplonSmall.png" alt="" />
+      <div id="reg">
+        <h1>Inscription</h1>
+        <p>Entre tes informations et inscris toi afin de montrer ton profil à 
+          de potentiels recruteurs
         </p>
-        <strong>Inscris toi maintenant !</strong>
-        <a href="">Inscription</a>
+        <form action="" method="POST" >
+          <input placeholder="Nom et prénom" name="name" type="text">
+          <select name="formation">
+            <option value="formation">formation</option>
+            <option value="formation">formation</option>
+            <option value="formation">formation</option>
+            <option value="formation">formation</option>
+          </select>
+          <input type="text" placeholder="Adresse mail" name="email" >
+          <input type="text" placeholder="Fonction à présenter aux recruteurs" name="fonction" >
+          <input type="text" placeholder="Mot de passe" name="password" >
+          <input type="text" placeholder="Répéter le mot de passe" >
+          <button class="btn">Inscription</button>
+        </form>
       </div>
-      <div id="coright">
+      <div id="co">
         <h1>Connexion</h1>
         <p>Utilise ton adresse mail et ton mot de passe afin de te connecter.</p>
-        <form action="">
-          <input type="text" name="email" placeholder="Adresse mail"/>
-          <input type="text" name="password" placeholder="Mot de passe"/>
+        <form action="" method="POST">
+          <input name="email" placeholder="Adresse mail" type="text" />
+          <input name="password" placeholder="Mot de passe" type="text"/>
           <a href="" class="mdpforgot">Mot de passe oublié ?</a>
-          <a href="">Connexion</a>
+          <button class="btn" name="login">Connexion</button>
         </form>
-        <p id="copyright">Copyright: &amp; <span id="year">2023</span> <strong>Simplon Côte d'Ivoire</strong> <span>Tous droits réservés</span>.</p>
       </div>
+      <div id="slide">
+        <h1>Bon retour parmis nous !</h1>
+        <div class="msg co">
+          <p>Oooups... Tu n'as pas encore de compte alors que tu es un alumnus 
+            de Simplon Côte d'Ivoire ?
+          </p>
+          <strong>Inscris toi maintenant !</strong>
+        </div>
+        <div class="msg reg">
+          <p>Oooups... Tu as déjà un compte et tu aimerais te connecter 
+            à ton espace personnel ?
+          </p>
+          <strong>Connecte toi maintenant !</strong>
+        </div>
+        <span class="btn co">Inscription</span>
+        <span class="btn reg">Connexion</span>
+      </div>
+      <p id="copyright">Copyright: &amp; <span id="year">2023</span> <strong>Simplon Côte d'Ivoire</strong> | <span>Tous droits réservés</span>.</p>
     </div>
+    <script src="talent.js"></script>
   </body>
+  
 </html>
