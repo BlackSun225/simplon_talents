@@ -103,6 +103,11 @@ nav > div  > ul a.active {
   font-size: 0.85rem;
   border: none;
   cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.btn:hover {
+  background: var(--black);
+  color: white;
 }
 #indexSection {
   width: 100%;
@@ -274,67 +279,23 @@ aside .card p {
   width: 100%;
 }
 .talentPic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 0.8rem;
   overflow: hidden;
   height: 240px;
 }
-.talent:hover .talentPic {
-  background-size: 125%;
+.talentPic img {
+  width: 100%;
+  height: 100%;
 }
 .talent:hover h3, .talent:hover h4 {
   text-decoration: underline;
 }
-.anoky {
-  background: url("image/image4.png") no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.arnold {
-  background: url("image/image1.png") no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.yvonne {
-  background: url("image/image2.png") no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.christ {
-  background: url("image/christ.png") no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.snooky {
-  background: url("image/image3.png") no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.john {
-  background: url("image/image4smile.png") no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.rick {
-  background: url("image/image4dreads.png") no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.ada {
-  background: url("image/image4hat.png") no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.koffi {
-  background: url("image/image4blue.png") no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.talentPic img {
-  width: 100%;
-  border-radius: 0.8rem;
-}
-.talentPic:hover img {
-  width: 110%;
+.talent:hover .talentPic img {
+  width: 125%;
+  height: 125%;
 }
 .talentInfos {
   display: flex;
@@ -442,6 +403,7 @@ aside .card p {
   padding: 0.4rem 0.8rem;
 }
 #talentprofile {
+  display: none;
   width: 100%;
 }
 #banniere {
@@ -489,7 +451,7 @@ aside .card p {
   height: 1.7em;
   border: 2px solid var(--black);
   background: white;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   font-weight: 900;
@@ -638,6 +600,7 @@ aside .card p {
   column-gap: 1em;
 }
 #param {
+  display: none;
   max-width: 550px;
   min-width: 270px;
   margin: 2em auto;
@@ -705,14 +668,21 @@ footer #copyright {
   transform: translate(50%,-50%);
 }
 #alertbox {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   min-height: 100vh;
   background: var(--softblack);
+  z-index: 3;
+  overflow: hidden;
 }
 #alertbox > div {
   background: white;
   border-radius: 10px;
+  margin: 0 auto;
 }
 #delaccount {
   max-width: 450px;
@@ -941,9 +911,6 @@ input[type=checkbox] {
 input[type=checkbox]:checked + .checkmark::after {
   display: block;
   margin: 0;
-}
-#talentprofile, #param, #alertbox {
-  display: none;
 }
 #profile {
   display: none;

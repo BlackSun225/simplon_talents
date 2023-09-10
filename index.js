@@ -5,6 +5,8 @@ const perso = document.getElementById("perso");
 const iconblack = document.getElementById("iconblack");
 const iconred = document.getElementById("iconred");
 const logout = document.getElementById("logout");
+const gotoparam = document.getElementById("#perso a:nth-child(1)");
+const gotoprofile = document.querySelector("#perso a:nth-child(2)");
 
 var checkCo = sessionStorage.getItem("isTalentCo");
 var persoDisplay = false;
@@ -39,3 +41,4 @@ profile.addEventListener("click", () => {
 logout.addEventListener("click", () => {
   sessionStorage.clear();
 });
+

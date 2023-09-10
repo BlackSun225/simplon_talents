@@ -10,6 +10,8 @@ const talentSection = document.getElementById("talentSection");
 //talentSection contain searchTalent, talentHome, pages and talentprofile
 const searchTalent = document.getElementById("searchTalent");
 const talentHome = document.getElementById("talentHome");
+//talentHome contain talentList and metier
+const talents = document.getElementsByClassName("talent"); //all the talent
 const pages = document.getElementById("pages"); //ul inside talentSection
 const talentprofile = document.getElementById("talentprofile");
 //talentprofile contain banniere, profilebio and param
@@ -17,6 +19,7 @@ const banniere = document.getElementById("banniere");
 const profilebio = document.getElementById("profilebio");
 //profilebio contain bio, cv and autretalents
 const param = document.getElementById("param");
+
 
 
 var checkCo = sessionStorage.getItem("isTalentCo");
@@ -51,4 +54,22 @@ profile.addEventListener("click", () => {
 
 logout.addEventListener("click", () => {
   sessionStorage.clear();
+});
+
+Array.from(talents).forEach(elem => {
+  elem.addEventListener("click", (event) => {
+    talentHome.style.display = "none";
+    pages.style.display = "none";
+    talentprofile.style.display = "block";
+    //add informations to the profile page
+    let a = event.currentTarget.querySelector(".talentPic");
+    let b = event.currentTarget.querySelector(".talentInfos");
+    let img = a.firstElementChild.src; //pick img from talent
+    let name = b.querySelector(".talentNom").innerText; //pick talent name
+    let work = b.querySelector(".talentWork").innerText;//pick talent work
+    banniere.querySelector(".pp").firstElementChild.src = img; //set img in banniere
+    banniere.children[1].firstElementChild.innerText = name; //set name in banniere
+    banniere.children[1].lastElementChild.innerText = work; //set work in banniere
+    location.href = "#talentprofile";
+  });
 });
