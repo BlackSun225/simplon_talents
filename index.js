@@ -6,19 +6,6 @@ const iconblack = document.getElementById("iconblack");
 const iconred = document.getElementById("iconred");
 const logout = document.getElementById("logout");
 
-const talentSection = document.getElementById("talentSection"); 
-//talentSection contain searchTalent, talentHome, pages and talentprofile
-const searchTalent = document.getElementById("searchTalent");
-const talentHome = document.getElementById("talentHome");
-const pages = document.getElementById("pages"); //ul inside talentSection
-const talentprofile = document.getElementById("talentprofile");
-//talentprofile contain banniere, profilebio and param
-const banniere = document.getElementById("banniere");
-const profilebio = document.getElementById("profilebio");
-//profilebio contain bio, cv and autretalents
-const param = document.getElementById("param");
-
-
 var checkCo = sessionStorage.getItem("isTalentCo");
 var persoDisplay = false;
 

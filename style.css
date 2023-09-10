@@ -961,7 +961,13 @@ input[type=checkbox]:checked + .checkmark::after {
   width: 0.6em;
   margin-left: 3px;
 }
-#profile > ul {
+#iconblack {
+  display: block;
+}
+#iconred {
+  display: none;
+}
+#perso {
   display: none;
   position: absolute;
   width: 200px;
@@ -973,7 +979,7 @@ input[type=checkbox]:checked + .checkmark::after {
   border-radius: 5px;
   box-shadow: 0 3px 12px var(--black);
 }
-#profile > ul li {
+#perso li {
   background: var(--softGray);
   padding: 0.5em 0.8em;
   color: var(--black);
@@ -982,10 +988,10 @@ input[type=checkbox]:checked + .checkmark::after {
   margin-bottom: 0.4em;
   border-radius: 3px;
 }
-#profile > ul > li:last-child {
+#perso > li:last-child {
   margin: 0;
 }
-#profile > ul li:hover {
+#perso li:hover {
   background: var(--mainRed);
   color: white;
 }
@@ -998,12 +1004,29 @@ input[type=checkbox]:checked + .checkmark::after {
   display: flex;
   align-items: center;
 }
+@keyframes imgin {
+  0% {opacity: 1;display: block;}
+  75% {opacity: 0.4;}
+  100% {display: none;}
+}
+@keyframes imgout {
+  0% {opacity: 0; display: none;}
+  75% {opacity: 0.7; display: block;}
+  100% {display: block;}
+}
 #comain > img {
+  display: block; 
   width: 2em;
   position: absolute;
-  left: 6%;
+  left: 8%;
   top: 2em;
+  animation-duration: 1s;
+}
+#comain img.reg {
   z-index: 5;
+}
+#comain img.co {
+  z-index: 6;
 }
 #comain h1 {
   font-weight: 900;
@@ -1024,17 +1047,17 @@ input[type=checkbox]:checked + .checkmark::after {
   margin-top: 1.5em;
 }
 @keyframes movecopyrightleft {
-  0% {left: 51%;}
-  100% {left: 6%;}
+  0% {left: 61%;}
+  100% {left: 8%;}
 }
 @keyframes movecopyrightright {
-  0% {left: 6%;}
-  100% {left: 51%;}
+  0% {left: 8%;}
+  100% {left: 61%;}
 }
 #comain #copyright {
   position: absolute;
   bottom: 1em;
-  left: 51%;
+  left: 61%;
   z-index: 5;
   color: black;
   font-weight: 700;
@@ -1044,10 +1067,10 @@ input[type=checkbox]:checked + .checkmark::after {
   font-weight: 900;
 }
 @keyframes disappear {
-  0% {opacity: 1; width: 55%;}
-  50%{opacity: 0.7; width: 55%;}
-  75% {width: 55%;}
-  100%{opacity: 1; width: 45%;}
+  0% {opacity: 1;}
+  50%{opacity: 0.5;}
+  70% {opacity: 0.3;}
+  100%{opacity: 1;}
 }
 #co, #reg {
   height: 100%;
@@ -1059,7 +1082,7 @@ input[type=checkbox]:checked + .checkmark::after {
   flex-direction: column;
 }
 #co {
-  width: 55%;
+  width: 45%;
   padding: 0 6%;
   justify-content: center;
 }
@@ -1072,9 +1095,9 @@ input[type=checkbox]:checked + .checkmark::after {
   margin-bottom: 0.5em;
 }
 #reg {
-  width: 45%;
+  width: 55%;
   justify-content: center;
-  padding: 0 6%;
+  padding: 0 8%;
 }
 #reg h1 {
   margin-bottom: 0.3em;
@@ -1087,17 +1110,17 @@ input[type=checkbox]:checked + .checkmark::after {
   color: white;
 }
 @keyframes slideright {
-  0% {left: 0; background: var(--mainRed); background-position: left bottom; opacity: 1}
-  50% {opacity: 0.5;}
-  100% {left: 55%; background: var(--black); background-position: right bottom; opacity: 1;}
+  0% {left: 0; background: var(--mainRed); background-position: left bottom; opacity: 1; width: 47.5%;}
+  40% {background-color: #ce0034c0;}
+  100% {left: 55%; background: var(--black); background-position: right bottom; opacity: 1; width: 45%;}
 }
 @keyframes slideleft {
-  0% {left: 55%; background: var(--black); background-position: right bottom; opacity: 1;}
-  50% {opacity: 0.7;}
-  100% {left: 0; background: var(--mainRed); background-position: left bottom; opacity: 1;}
+  0% {left: 55%; background: var(--black); background-position: right bottom; opacity: 1; width: 45%;}
+  40% {background-color: #ce0034c0;}
+  100% {left: 0; background: var(--mainRed); background-position: left bottom; opacity: 1; width: 47.5%}
 }
 #slide {
-  width: 45%;
+  width: 47.5%;
   height: 100%;
   position: absolute;
   left: 0;
@@ -1107,7 +1130,7 @@ input[type=checkbox]:checked + .checkmark::after {
   background-size: 65%;
   background-position: left bottom;
   color: white;
-  padding: 0 6%;
+  padding: 0 8%;
   display: flex;
   flex-direction: column;
   justify-content: center;
