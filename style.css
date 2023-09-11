@@ -133,11 +133,9 @@ p {
 #searchTalent p {
   text-align: center;
   color: var(--black);
-  width: 50%;
   margin-bottom: 0.9rem;
 }
 #searchTalent form {
-  width: 60%;
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -172,18 +170,9 @@ input::-webkit-input-placeholder {
 }
 #homeDesc {
   width: 100%;
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-#homeDesc article, #homeDesc aside {
-  width: max(50%, 275px);
-  display: flex;
 }
 #homeDesc article {
   flex-direction: column;
-  align-items: flex-start;
-  padding-right: 2rem;
 }
 #homeDesc h2 {
   color: var(--black);
@@ -198,6 +187,9 @@ input::-webkit-input-placeholder {
 #homeDesc p strong {
   font-weight: 800;
 }
+#homeDesc article, #homeDesc aside {
+  display: flex;
+}
 #homeDesc article p {
   margin: 1rem 0;
 }
@@ -205,13 +197,16 @@ input::-webkit-input-placeholder {
   width: 1.5rem;
 }
 #homeDesc article .btn {
-  margin-top: 2rem;
+  margin: 2rem 0;
   padding: 0.5rem 2rem;
+  max-width: 200px;
 }
 #homeDesc aside {
   gap: 20px;
+  border: 1px solid red;
 }
 aside > div {
+  border: 1px solid red;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -222,7 +217,7 @@ aside > div:last-child {
   margin-top: 2rem;
 }
 aside .card {
-  width: max(100%, 270px);
+  width: max(100%, 250px);
   padding: 1rem;
   border-radius: 10px;
   padding-bottom: 2rem;
@@ -248,15 +243,23 @@ aside .card h3 {
 aside .card p {
   font-weight: 400;
 }
+
+
+
+
+
+
+
+
+
+
+
+/* talent.html */
 #talentSection {
   width: 100%;
 }
 #talentHome {
   width: 100%;
-  padding: 0 6%;
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
 }
 #talentList {
   display: flex;
@@ -264,10 +267,6 @@ aside .card p {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  width: 70%;
-}
-#metier {
-  width: 30%;
 }
 .talent {
   border-radius: 0.8rem;
@@ -333,7 +332,7 @@ aside .card p {
   font-weight: 900;
   margin-bottom: 1rem;
 }
-#metier > div {
+#metier > div > div {
   margin-bottom: 1.5rem;
 }
 #metier > div h3 {
@@ -383,6 +382,7 @@ aside .card p {
   align-items: center;
   margin: 3rem 0;
   padding: 0 6%;
+  flex-wrap: wrap;
 }
 #talentSection > ul li {
   font-size: 1rem;
@@ -669,6 +669,9 @@ footer #copyright {
 }
 #alertbox {
   display: none;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 200px;
   position: absolute;
   left: 0;
   top: 0;
@@ -676,7 +679,7 @@ footer #copyright {
   height: 100%;
   min-height: 100vh;
   background: var(--softblack);
-  z-index: 3;
+  z-index: 7;
   overflow: hidden;
 }
 #alertbox > div {
@@ -698,12 +701,17 @@ footer #copyright {
   position: absolute;
   top: -2em;
   right: 0;
+  cursor: pointer;
 }
 .redcross {
   width: 2.2em;
 }
 .blackcross {
   width: 0.9em;
+  cursor: pointer;
+}
+.blackcross:hover {
+  transform: scale(120%);
 }
 #delaccount h5, #suppr h5 {
   color: var(--mainRed);
@@ -729,7 +737,7 @@ footer #copyright {
   width: 30%;
   text-align: center;
 }
-#delaccount .btn:first-of-type {
+#delaccount .btn:first-of-type, #suppr .btn:first-of-type {
   background: var(--black);
 }
 #modifNomFonction , 
@@ -742,8 +750,7 @@ footer #copyright {
 #modifExp ,
 #addCertif , 
 #modifCertif {
-  min-width: 250px;
-  max-width: 500px;
+  width: min(500px, 100%);
 }
 #updateComp {
   min-width: 250px;
@@ -963,6 +970,14 @@ input[type=checkbox]:checked + .checkmark::after {
   background: var(--mainRed);
   color: white;
 }
+
+
+
+
+
+
+
+/* connexion.html */
 #comain {
   width: 100vw;
   max-width: 1440px;
@@ -1128,4 +1143,88 @@ input[type=checkbox]:checked + .checkmark::after {
 }
 #slide > span.reg {
   background: var(--mainRed);
+}
+
+
+
+
+
+@media screen and (min-width:1200px) {
+  #searchTalent form {
+    width: 60%;
+  }
+  #searchTalent p {
+    width: 50%;
+  }
+  #homeDesc {
+    display: flex;
+    align-items: flex-start;
+  }
+  #homeDesc article, #homeDesc aside {
+    display: flex;
+    width: 50%;
+  }
+  #homeDesc article {
+    align-items: flex-start;
+    padding-right: 2rem;
+  }
+  aside > div {
+    max-width: 270px;
+  }
+  #homeDesc article .btn {
+    margin-bottom: 0;
+  }
+  #talentHome {
+    display: flex;
+    align-items: flex-start;
+    padding: 0 6%;
+    gap: 1rem;
+  }
+  #talentList {
+    width: 70%;
+  }
+  #metier {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1199px) {
+  #talentHome {
+    display: block;
+    padding: 0 2.5%;
+  }
+  #talentList {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  #metier {
+    margin-top: 3em;
+  }
+  #metier > div {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  #metier > div > div {
+    width: 50%;
+    min-width: 250px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #homeDesc aside {
+    flex-direction: column;
+  }
+  #homeDesc aside > div {
+    width: 100%;
+  }
+  #talentHome {
+    display: block;
+    padding: 0 1em;
+  }
+  #talentList {
+    width: 100%;
+    justify-content: center;
+  }
 }

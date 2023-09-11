@@ -23,6 +23,23 @@ const modif = document.getElementsByClassName("modif");
 const gotoparam = document.querySelector("#perso a:nth-child(1)");
 const gotoprofile = document.querySelector("#perso a:nth-child(2)");
 
+const alertbox = document.getElementById("alertbox");
+const modifNomFonction = document.getElementById("modifNomFonction");
+const delaccount = document.getElementById("delaccount");
+const suppr = document.getElementById("suppr");
+const editBio = document.getElementById("editBio");
+const addComp = document.getElementById("addComp");
+const updateComp = document.getElementById("updateComp");
+const addForm = document.getElementById("addForm");
+const modifForm = document.getElementById("modifForm");
+const addExp = document.getElementById("addExp");
+const modifExp = document.getElementById("modifExp");
+const addCertif = document.getElementById("addCertif");
+const modifCertif = document.getElementById("modifCertif");
+const blackcross = document.querySelectorAll(".blackcross");
+
+const paramsupbtn = document.querySelector("#param button.supp");
+
 var checkCo = sessionStorage.getItem("isTalentCo");
 var persoDisplay = false;
 
@@ -87,6 +104,7 @@ if(handleParam === "true") {
   banniere.children[1].firstElementChild.innerText = "Bénédicte Anoky"; //set name in banniere
   banniere.children[1].lastElementChild.innerText = "Cheffe de projet Digital"; 
   banniere.querySelector(".pp").firstElementChild.src = "image/image4.png";
+  searchTalent.style.display = "none";
   profilebio.style.display = "none";
   param.style.display = "block";
   Array.from(modif).forEach(elem => {
@@ -148,8 +166,127 @@ gotoparam.addEventListener("click", () => {
   banniere.children[1].lastElementChild.innerText = "Cheffe de projet Digital"; 
   banniere.querySelector(".pp").firstElementChild.src = "image/image4.png";
   profilebio.style.display = "none";
+  searchTalent.style.display = "none";
   param.style.display = "block";
   Array.from(modif).forEach(elem => {
     elem.style.display = "none"; 
   });
 });
+
+function displayAlertBoxDiv() {
+  alertbox.style.display = "flex";
+  document.querySelectorAll("#alertbox > div").forEach(elem => {
+    elem.style.display = "none";
+  });
+}
+
+paramsupbtn.addEventListener("click", () => {
+  displayAlertBoxDiv();
+  delaccount.style.display = "flex";
+  location.href = "#delaccount";
+});
+
+document.querySelector("#delaccount img.white").addEventListener("click", () => {
+  delaccount.style.display = "none";
+  alertbox.style.display = "none";
+});
+
+document.querySelectorAll("#delaccount .btn").forEach(elem => {
+  elem.addEventListener("click", () => {
+    delaccount.style.display = "none";
+    alertbox.style.display = "none";
+  });
+});
+
+//on click on .blackcross the pop up and the alertbox disappear
+blackcross.forEach(elem => { //click on .blackcross hide #alertbox
+  elem.addEventListener("click", (event) => {
+    event.currentTarget.parentElement.parentElement.style.display = "none";
+    alertbox.style.display = "none";
+  });
+});
+
+//onclick on a button in a form inside the alertbox
+document.querySelectorAll("#alertbox > div .btn").forEach(elem => {
+  elem.addEventListener("click", (event) => {
+    event.currentTarget.parentElement.parentElement.style.display = "none";
+    alertbox.style.display = "none";
+  });
+});
+
+//onclick on banniere .modif, pop up to modif name and work appear
+document.querySelector("#banniere .modif").addEventListener("click", () => {
+  displayAlertBoxDiv();
+  modifNomFonction.style.display = "block";
+});
+
+//onclick on a trash icon the pop up to alert appear
+document.querySelectorAll(".imgdel").forEach(elem => {
+  elem.addEventListener("click", () => {
+    displayAlertBoxDiv();
+    suppr.style.display = "block"; 
+    location.href = "#suppr";
+  })
+});
+
+document.querySelector("#bio .modif").addEventListener("click", () => {
+  displayAlertBoxDiv();
+  editBio.style.display = "block";
+  location.href = "#editBio";
+});
+
+//add a trick
+document.querySelector("#cvComp .add").addEventListener("click", () => {
+  displayAlertBoxDiv();
+  addComp.style.display = "block";
+  location.href = "#addComp";
+});
+
+//update tricks
+document.querySelector("#cvComp .write").addEventListener("click", () => {
+  displayAlertBoxDiv();
+  updateComp.style.display = "block";
+  location.href = "#updateComp";
+});
+
+document.querySelector("#cvForm .add").addEventListener("click", () => {
+  displayAlertBoxDiv();
+  addForm.style.display = "block";
+  location.href = "#addForm";
+});
+
+document.querySelectorAll("#cvForm .imgwrite").forEach(elem => {
+  elem.addEventListener("click", () => {
+    displayAlertBoxDiv();
+    modifForm.style.display = "block";
+    location.href = "#modifForm";
+  });
+})
+
+document.querySelector("#cvExp .add").addEventListener("click", () => {
+  displayAlertBoxDiv();
+  addExp.style.display = "block";
+  location.href = "#addExp";
+});
+
+document.querySelectorAll("#cvExp .imgwrite").forEach(elem => {
+  elem.addEventListener("click", () => {
+    displayAlertBoxDiv();
+    modifExp.style.display = "block";
+    location.href = "#modifExp";
+  });
+})
+
+document.querySelector("#certif .modif").addEventListener("click", () => {
+  displayAlertBoxDiv();
+  addCertif.style.display = "block";
+  location.href = "#addCertif";
+});
+
+document.querySelectorAll("#certif .imgwrite").forEach(elem => {
+  elem.addEventListener("click", () => {
+    displayAlertBoxDiv();
+    modifCertif.style.display = "block";
+    location.href = "#modifCertif";
+  });
+})
