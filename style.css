@@ -945,6 +945,7 @@ input[type=checkbox]:checked + .checkmark::after {
   background: white;
   border-radius: 5px;
   box-shadow: 0 3px 12px var(--black);
+  z-index: 7;
 }
 #perso li {
   background: var(--softGray);

@@ -19,8 +19,9 @@ const banniere = document.getElementById("banniere");
 const profilebio = document.getElementById("profilebio");
 //profilebio contain bio, cv and autretalents
 const param = document.getElementById("param");
-
-
+const modif = document.getElementsByClassName("modif");
+const gotoparam = document.querySelector("#perso a:nth-child(1)");
+const gotoprofile = document.querySelector("#perso a:nth-child(2)");
 
 var checkCo = sessionStorage.getItem("isTalentCo");
 var persoDisplay = false;
@@ -39,6 +40,7 @@ Array.from(button).forEach(elem => {
   })
 });
 
+//in the nav to display the dropdown
 profile.addEventListener("click", () => {
   persoDisplay = !persoDisplay;
   if(persoDisplay) {
@@ -56,6 +58,45 @@ logout.addEventListener("click", () => {
   sessionStorage.clear();
 });
 
+var displayCV = sessionStorage.getItem("cv"); //to display the cv when the user click from index
+if(displayCV === "true") { //when the user is connected and want to see his infos
+  let name = sessionStorage.getItem("talentName");
+  let work = sessionStorage.getItem("talentWork");
+  talentHome.style.display = "none";
+  pages.style.display = "none";
+  talentprofile.style.display = "block";
+  banniere.children[1].firstElementChild.innerText = name; //set name in banniere
+  banniere.children[1].lastElementChild.innerText = work; 
+  banniere.querySelector(".pp").firstElementChild.src = "image/image4.png";
+  if(name === "Bénédicte Anoky" && work === "Cheffe de projet Digital") {
+    Array.from(modif).forEach(elem => {
+      elem.style.display = "flex";
+    });
+    searchTalent.style.display = "none";
+  }
+  setTimeout(() => { 
+    sessionStorage.setItem("cv","false");
+  }, 10);
+}
+
+var handleParam = sessionStorage.getItem("param"); //display #param when the user click from index
+if(handleParam === "true") {
+  talentHome.style.display = "none";
+  pages.style.display = "none";
+  talentprofile.style.display = "block";
+  banniere.children[1].firstElementChild.innerText = "Bénédicte Anoky"; //set name in banniere
+  banniere.children[1].lastElementChild.innerText = "Cheffe de projet Digital"; 
+  banniere.querySelector(".pp").firstElementChild.src = "image/image4.png";
+  profilebio.style.display = "none";
+  param.style.display = "block";
+  Array.from(modif).forEach(elem => {
+    elem.style.display = "none"; 
+  });
+  setTimeout(() => {
+    sessionStorage.setItem("param", "false");
+  }, 10);
+}
+
 Array.from(talents).forEach(elem => {
   elem.addEventListener("click", (event) => {
     talentHome.style.display = "none";
@@ -71,5 +112,44 @@ Array.from(talents).forEach(elem => {
     banniere.children[1].firstElementChild.innerText = name; //set name in banniere
     banniere.children[1].lastElementChild.innerText = work; //set work in banniere
     location.href = "#talentprofile";
+    Array.from(modif).forEach(elem => {
+      elem.style.display = "none";
+    });
+    searchTalent.style.display = "flex";
+  });
+});
+
+gotoprofile.addEventListener("click", () => {
+  sessionStorage.setItem("talentName", "Bénédicte Anoky");
+  sessionStorage.setItem("talentWork", "Cheffe de projet Digital");
+  let name = sessionStorage.getItem("talentName");
+  let work = sessionStorage.getItem("talentWork");
+  talentHome.style.display = "none";
+  pages.style.display = "none";
+  talentprofile.style.display = "block";
+  profilebio.style.display = "block";
+  param.style.display = "none";
+  banniere.children[1].firstElementChild.innerText = name; //set name in banniere
+  banniere.children[1].lastElementChild.innerText = work; 
+  banniere.querySelector(".pp").firstElementChild.src = "image/image4.png";
+  if(name === "Bénédicte Anoky" && work === "Cheffe de projet Digital") {
+    Array.from(modif).forEach(elem => {
+      elem.style.display = "flex";
+    });
+    searchTalent.style.display = "none";
+  }
+});
+
+gotoparam.addEventListener("click", () => {
+  talentHome.style.display = "none";
+  pages.style.display = "none";
+  talentprofile.style.display = "block";
+  banniere.children[1].firstElementChild.innerText = "Bénédicte Anoky"; //set name in banniere
+  banniere.children[1].lastElementChild.innerText = "Cheffe de projet Digital"; 
+  banniere.querySelector(".pp").firstElementChild.src = "image/image4.png";
+  profilebio.style.display = "none";
+  param.style.display = "block";
+  Array.from(modif).forEach(elem => {
+    elem.style.display = "none"; 
   });
 });

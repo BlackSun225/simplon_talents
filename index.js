@@ -5,8 +5,9 @@ const perso = document.getElementById("perso");
 const iconblack = document.getElementById("iconblack");
 const iconred = document.getElementById("iconred");
 const logout = document.getElementById("logout");
-const gotoparam = document.getElementById("#perso a:nth-child(1)");
+const gotoparam = document.querySelector("#perso a:nth-child(1)");
 const gotoprofile = document.querySelector("#perso a:nth-child(2)");
+const modif = document.getElementsByClassName("modif");
 
 var checkCo = sessionStorage.getItem("isTalentCo");
 var persoDisplay = false;
@@ -42,3 +43,14 @@ logout.addEventListener("click", () => {
   sessionStorage.clear();
 });
 
+gotoprofile.addEventListener("click", () => {
+  location.href="talents.html";
+  sessionStorage.setItem("talentName","Bénédicte Anoky");
+  sessionStorage.setItem("talentWork","Cheffe de projet Digital");
+  sessionStorage.setItem("cv", "true");
+});
+
+gotoparam.addEventListener("click", () => {
+  location.href = "talents.html";
+  sessionStorage.setItem("param","true");
+});
