@@ -1173,6 +1173,10 @@ input[type=checkbox]:checked + .checkmark::after {
 
 
 @media screen and (min-width:1200px) {
+  #navdiv {
+    display: flex;
+    flex-direction: row;
+  }
   #searchTalent form {
     width: 60%;
   }
@@ -1223,6 +1227,10 @@ input[type=checkbox]:checked + .checkmark::after {
 
 
 @media screen and (min-width: 600px) and (max-width: 1199px) {
+  #navdiv {
+    display: flex;
+    flex-direction: row;
+  }
   #talentHome {
     display: block;
     padding: 0 2.5%;
