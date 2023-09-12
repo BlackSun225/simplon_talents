@@ -8,6 +8,14 @@ const logout = document.getElementById("logout");
 const gotoparam = document.querySelector("#perso a:nth-child(1)");
 const gotoprofile = document.querySelector("#perso a:nth-child(2)");
 const modif = document.getElementsByClassName("modif");
+const menu = document.getElementById("menu");
+const navdiv = document.getElementById("navdiv");
+var see = false;
+
+menu.addEventListener("click", () => {
+  see ? navdiv.style.display = "none" : navdiv.style.display = "flex";
+  see = !see;
+});
 
 var checkCo = sessionStorage.getItem("isTalentCo");
 var persoDisplay = false;

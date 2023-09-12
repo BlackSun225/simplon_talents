@@ -5,6 +5,9 @@ const perso = document.getElementById("perso");
 const iconblack = document.getElementById("iconblack");
 const iconred = document.getElementById("iconred");
 const logout = document.getElementById("logout");
+const menu = document.getElementById("menu");
+const navdiv = document.getElementById("navdiv");
+var see = false;
 
 const talentSection = document.getElementById("talentSection"); 
 //talentSection contain searchTalent, talentHome, pages and talentprofile
@@ -39,6 +42,11 @@ const modifCertif = document.getElementById("modifCertif");
 const blackcross = document.querySelectorAll(".blackcross");
 
 const paramsupbtn = document.querySelector("#param button.supp");
+
+menu.addEventListener("click", () => {
+  see ? navdiv.style.display = "none" : navdiv.style.display = "flex";
+  see = !see;
+});
 
 var checkCo = sessionStorage.getItem("isTalentCo");
 var persoDisplay = false;

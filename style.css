@@ -21,6 +21,8 @@
 #main {
   position: relative;
   width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 ul {
   list-style-type: none;
@@ -203,15 +205,17 @@ input::-webkit-input-placeholder {
 }
 #homeDesc aside {
   gap: 20px;
-  border: 1px solid red;
+  justify-content: space-evenly;
 }
 aside > div {
-  border: 1px solid red;
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
+}
+aside .card {
+  margin-bottom: 1em;
 }
 aside > div:last-child {
   margin-top: 2rem;
@@ -264,13 +268,13 @@ aside .card p {
 #talentList {
   display: flex;
   row-gap: 1rem;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
 }
 .talent {
   border-radius: 0.8rem;
-  width: max(32%, 250px);
+  width: 250px; /*max(32%, 250px);*/
   background: var(--blackTwo);
   cursor: pointer;
 }
@@ -414,6 +418,7 @@ aside .card p {
   justify-content: center;
   align-items: center;
   position: relative;
+  flex-wrap: wrap;
 }
 #banniere .pp {
   width: 200px;
@@ -487,13 +492,13 @@ aside .card p {
 #cv {
   width: 100%;
   display: flex;
+  justify-content: space-evenly;
   align-items: flex-start;
   flex-wrap: wrap;
-  column-gap: 1em;
-  margin: 2em 0 3em;
+  margin: 2em 0 3em
 }
 #cv > div {
-  width: 49%;
+  width: 49%
 }
 #cv > div > div {
   border-radius: 0.7em;
@@ -596,8 +601,10 @@ aside .card p {
 #autretalents > div {
   width: 100%;
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  column-gap: 1em;
+  gap: 1em;
+  flex-wrap: wrap;
 }
 #param {
   display: none;
@@ -625,11 +632,18 @@ aside .card p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 #param button {
   display: block;
   width: 30%;
+  min-width: 175px;
   font-size: 0.8em;
+  transition: all 0.3s ease-out;
+}
+#param button:hover {
+  transform: scale(90%);
+  font-weight: 700;
 }
 #param button.supp {
   background: var(--black);
@@ -977,12 +991,12 @@ input[type=checkbox]:checked + .checkmark::after {
 
 
 
+
 /* connexion.html */
 #comain {
   width: 100vw;
   max-width: 1440px;
-  height: 100vh;
-  max-height: 900px;
+  margin: 0 auto;
   position: relative;
   display: flex;
   align-items: center;
@@ -1014,7 +1028,7 @@ input[type=checkbox]:checked + .checkmark::after {
 #comain h1 {
   font-weight: 900;
   font-size: 2.7em;
-  line-height: 1em;
+  line-height: 1.3em;
 }
 #comain > div p {
   margin-bottom: 1.5em;
@@ -1040,7 +1054,6 @@ input[type=checkbox]:checked + .checkmark::after {
 #comain #copyright {
   position: absolute;
   bottom: 1em;
-  left: 61%;
   z-index: 5;
   color: black;
   font-weight: 700;
@@ -1063,6 +1076,12 @@ input[type=checkbox]:checked + .checkmark::after {
 #co, #comain form, #reg {
   display: flex;
   flex-direction: column;
+}
+#comain form > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #co {
   width: 45%;
@@ -1131,6 +1150,7 @@ input[type=checkbox]:checked + .checkmark::after {
 }
 #slide .btn {
   width: 32%;
+  min-width: 150px;
   text-align: center;
 }
 #slide .btn:hover {
@@ -1144,6 +1164,9 @@ input[type=checkbox]:checked + .checkmark::after {
 #slide > span.reg {
   background: var(--mainRed);
 }
+/* connexion.html */
+
+
 
 
 
@@ -1186,7 +1209,18 @@ input[type=checkbox]:checked + .checkmark::after {
   #metier {
     width: 30%;
   }
+  #comain {
+    height: 100vh;
+    max-height: 1024px;
+  }
+  #comain #copyright {
+    left: 61%;
+  }
+  .mob {
+    display: none;
+  }
 }
+
 
 @media screen and (min-width: 600px) and (max-width: 1199px) {
   #talentHome {
@@ -1195,7 +1229,6 @@ input[type=checkbox]:checked + .checkmark::after {
   }
   #talentList {
     width: 100%;
-    justify-content: space-evenly;
   }
   #metier {
     margin-top: 3em;
@@ -1210,21 +1243,149 @@ input[type=checkbox]:checked + .checkmark::after {
     width: 50%;
     min-width: 250px;
   }
+  #profilebio {
+    padding: 1em; 
+  }
+  #autretalents .talent {
+    transform: scale(90%);
+  }
+  #comain {
+    height: 100vh;
+    max-height: 1024px;
+  }
+  #comain #copyright {
+    left: 61%;
+    max-width: 275px;
+  }
+  .mob {
+    display: none;
+  }
 }
 
+
 @media screen and (max-width: 600px) {
+  nav {
+    position: relative;
+  }
+  #menu {
+    display: block;
+    width: 1.1em;
+    cursor: pointer;
+    position: relative;
+  }
+  #navdiv {
+    display: none;
+    position: absolute;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    right: 0;
+    top: calc(100% + 1em);
+    background: rgba(218, 216, 216, 0.192);
+    padding: 1em;
+    z-index: 4;
+    backdrop-filter: blur(15px);
+  }
+  nav > div > ul {
+    flex-direction: column;
+  }
+  nav > div > ul a:not(:last-child) {
+    margin-bottom: 1em;
+  }
+  #perso {
+    bottom: 0;
+    right: 50%;
+    transform: translate(calc(50% - 0.4em) ,calc(100% + 1em));
+  }
   #homeDesc aside {
     flex-direction: column;
   }
   #homeDesc aside > div {
     width: 100%;
   }
+  #searchtalent {
+    padding: 0 1.5em;
+  }
+  #banniere h1, 
+  #banniere h2, 
+  #autretalents h5 {
+    text-align: center;
+  }
   #talentHome {
     display: block;
-    padding: 0 1em;
+    padding: 0 1.5em;
   }
   #talentList {
     width: 100%;
+    justify-content: space-evenly;
+  }
+  #metier {
+    margin-top: 3em;
+  }
+  #pages {
+    row-gap: 1em;
+  }
+  .groupe8 {
+    display: none;
+  }
+  #cv > div {
+    width: 100%;
+  }
+  .formItem > div, 
+  .expItem > div, 
+  .certifItem > div {
+    margin-left: 1em;
+  }
+  #autretalents > div {
+    justify-content: space-evenly;
+    gap: 0;
+  }
+  #autretalents .talent {
+    margin-bottom: 1em;
+  }
+  #param {
+    padding: 1em;
+  }
+  #param form > div {
     justify-content: center;
+  }
+  #comain {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+  }
+  #comain h1 {
+    width: 100%;
+    line-height: 1.1em;
+  }
+  #co, #reg {
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    position: relative;
+    padding: 0 1.5em;
+  }
+  #slide {
+    display: none;
+  }
+  #comain #copyright {
+   display: none;
+
+  }
+  span.mob {
+    margin-top: 1em;
+    cursor: pointer;
+    color: white;
+    background: var(--black);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 400;
+  }
+  span.mob:hover {
+    transform: scale(90%);
+  }
+  #reg, #comain img {
+    display: none;
   }
 }
